@@ -13,7 +13,7 @@
 ## Requirements and Goals of System 
 > Note: Get exact scope of system before designing any solution. 
 
-### Functional Requirements 
+### Functional Requirements
 1. Generate shorter URL and short alias of it. 
 2. On access of these short links they should go to the original URL 
 3. Users should be able to pick custom URL for their links 
