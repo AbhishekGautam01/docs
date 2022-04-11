@@ -11,10 +11,10 @@
 ## **S** Single-responsibility principle 
 ![S](./img/S.png)
 
-> **DEFINATION**: A class should have only a single responsibility, that is, only changes to one part of software's specification should be able to affect the specification of other class. 
+> **DEFINITION**: A class should have only a single responsibility, that is, only changes to one part of software's specification should be able to affect the specification of other class. 
 
 * A class should contain variables and methods relevant to its functionality. 
-* Classes can work together to complete a big complex task but all class must complete a function from start to finish before passsing the output to another class. 
+* Classes can work together to complete a big complex task but all class must complete a function from start to finish before passing the output to another class. 
 <br/>
 
 * A class should have only **one reason to change**
