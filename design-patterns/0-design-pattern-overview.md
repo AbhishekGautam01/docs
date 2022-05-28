@@ -27,3 +27,6 @@
     * Do the work in separate branch 
     * Verify the behavior is consistent after completing the refactoring
     * Be prepared to delete and start over if the result isn’t any better. 
+
+# Links
+![Source-making](https://sourcemaking.com/design_patterns)
