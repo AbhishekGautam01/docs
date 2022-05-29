@@ -1,4 +1,7 @@
-﻿namespace Decorator
+﻿using System;
+using System.Collections.Concurrent;
+
+namespace Decorator
 {
     public class CachedAuthorRepository : IAuthorRepository
     {
