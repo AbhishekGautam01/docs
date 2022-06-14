@@ -62,7 +62,7 @@ public void RegisterUser(string username)
 ---
 ## O: Open-closed Principle
 ![O](./img/O.png)
-> **DEFINITION**: Software entities... should be open for extension but closed for modification.
+> **DEFINITION**: Software entities(classes, modules, functions)... should be open for extension but closed for modification.
 
 * OCP calls for entities that can be widely adapted but also remain unchanged. This leads us to create **duplicate entities with specialized behavior through polymorphism**  
 
@@ -71,6 +71,8 @@ public void RegisterUser(string username)
 * Our parent entity can act as **abstract base class** that can be used with **specializations through inheritance** 
 
 > It minimizes program risk when we **add new uses for an entity**  as instead of re-working base class to fit a WIP feature, we can create separate derived class.
+
+* **Bertrand Mayer** proposes to use **inheritance** to achieve this, But inheritance introduces **tight coupling** hence Robert C Martin introduces **Polymorphic Open/Closed Principle** which uses interfaces to allow different implementation. 
 
 ### Implementation
 1. **Wrong Implementation** 
