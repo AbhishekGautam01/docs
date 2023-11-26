@@ -1,0 +1,35 @@
+--------------
+Entity Framework
+--------------
+
+Ques. What is dbCOtext
+DbContext is a class in Entity Framework API that forms a connection between a domain or entity class and the database. It is primarily responsible for communicating with the database.
+
+Ques. What is DbSet
+The DbSet is another class that represents an entity set to read, create, update, and delete operations.
+
+Ques. What is EDMX file.
+A .edmx file in Entity Framework is an XML file that can give definition to conceptual models, storage models, and the mapping between them.
+
+Ques.What is navigation properties
+Navigation properties in Entity Framework is a way of representing a foreign key relationship within the database.
+
+Ques. Different types of approached 
+	COde First
+	Data First
+	Model FIrst
+
+Ques. How many types of propeties
+	scalar actual entities
+	complex 
+	navigation
+
+Q12. What is lazy loading?
+Lazy loading is a way to return only objects that are used. When you query the database model, lazy loading only returns the immediate tables needed by the user. All related tables are returned when they are used.
+
+Q15.  What is eager loading?
+Eager loading is the opposite of lazy loading. When you query for objects, eager loading returns all of the objects including the related objects. 
+
+Q13. How to disable the lazy loading framework?
+You can disable the lazy loading by
+context.ContextOptions.LazyLoadingEnabled = false;

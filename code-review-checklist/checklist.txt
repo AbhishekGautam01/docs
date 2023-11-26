@@ -1,0 +1,76 @@
+Code formatting: 
+	-> Proper naming convention 
+	-> Proper variable names
+	-> Commented code? -> removing unnessary code.
+	-> Comments in place
+		-> no needless comments 
+		-> no obselete comments
+		-> no redundant comments
+		-> methodds document parameters it modifies, functional 		   dependencies
+		-> comments consistent in format
+
+	-> Check for code that includes long methods with too many branches which 		can be reconstructed into more simple method
+	-> Readability
+	-> all unused using removed
+	-> code should have no warning 
+	-> 
+
+Architecture
+	-> adherence to architecture being followed
+	-> adherence to the design priciples being implemented. 
+
+Coding 
+	-> adhere to code guidelines
+	-> refractoring statements in loop to outside loop
+	-> loop optimization
+	-> No magic numbers in code -> Use of constants/ configuration values
+	-> Use of enum  for grouping similar values(enums not int const)
+	-> Use of framework features whereever possible 
+	-> DRY(Identifying reusable functions, services & components) -  		redundancy minimized
+	-> Single responsibility principle
+	-> Dependency Injection 
+	-> Interface Segregation : Do not create lengthy interfaces, instead 		split them into smaller interfaces based on the functionality. 		The interface should not contain any dependencies (parameters), 		which are not required for the expected functionality.
+	-> Liskov sustainability principles
+	-> method has appropriate number, types of parameters
+	-> no unnecessary features
+	-> check of any unreachable code.
+	-> checking if code is as modular as it can be.
+	-> null checks should be performed wherever applicable
+	-> Disposing of Unmanaged Resources like File I/O, Network resources, etc
+	-> Avoid nested loops and nested if
+	-> Proper usage of var, object, and dynamic keywords
+	-> use of interfaces wherever  needed to maintain decoupling
+	-> Use a Stringbuilder instead of string if multiple concatenations are required, to save heap memory.
+	-> usage of 'out' and 'ref' should be avoided 
+	
+Error handling
+	-> error messages understandable and complete
+	-> edge cases are handled 
+	-> validating parameters
+	-> files, other input data validation
+	-> proper exception logs
+
+
+
+Performance 
+	-> Use of datatypes which best suit the needs
+	-> Caching the session
+	-> can any logging be removed at a particular place. 
+	-> replacing code with library or built in functions
+	-> Avoid type casting and type conversions -> costs performance
+
+
+	
+
+
+Security
+	-> API keys, Session tockens & authorization facilities should be 		implmented in secure way?
+	-> Proper Authenticaion & Authorization
+
+
+SonarQube
+
+
+
+
+https://www.codeproject.com/Reference/593751/Code-Review-Checklist-and-Guidelines-for-Csharp-De

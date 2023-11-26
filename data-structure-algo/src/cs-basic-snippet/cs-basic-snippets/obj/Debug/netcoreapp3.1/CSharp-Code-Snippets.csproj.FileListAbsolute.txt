@@ -1,0 +1,13 @@
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\bin\Debug\netcoreapp3.1\CSharp-Code-Snippets.exe
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\bin\Debug\netcoreapp3.1\CSharp-Code-Snippets.deps.json
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\bin\Debug\netcoreapp3.1\CSharp-Code-Snippets.runtimeconfig.json
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\bin\Debug\netcoreapp3.1\CSharp-Code-Snippets.runtimeconfig.dev.json
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\bin\Debug\netcoreapp3.1\CSharp-Code-Snippets.dll
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\bin\Debug\netcoreapp3.1\CSharp-Code-Snippets.pdb
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.csprojAssemblyReference.cache
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.AssemblyInfoInputs.cache
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.AssemblyInfo.cs
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.csproj.CoreCompileInputs.cache
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.dll
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.pdb
+D:\MY WORK\SC\Net\CSharp-Code-Snippets\CSharp-Code-Snippets\obj\Debug\netcoreapp3.1\CSharp-Code-Snippets.genruntimeconfig.cache

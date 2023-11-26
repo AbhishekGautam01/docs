@@ -1,0 +1,40 @@
+Golden Rule of Code review 
+
+Respect others, yet don’t take anything personally! We all make mistakes at some point. What’s important is to learn and improve, and to treat others how we’d like to be treated.
+
+
+Code Review Guidelines
+
+1. if you commit to review a code, review it thoroughly. Read the code dont skim it & apply thought to both code and style.
+
+2. Research things you dont undestand and ask questions. Aim to understand every line becuase other people may also need to read this code. If you are having trouble understanding the code, it may need to be refactored, cleaned, or better commented
+
+3. Don't assume the code works - build it and test it yourself. Run the automated tests and try to break the code. 
+
+4. Commenting matters - try to look for intent comments especially for logical statement. While checking for commenting please check for: 
+	1. The intent comment doesnt match the logic. 
+	2. The intent comment doesnt make sense
+	3. The intent commment has major typos 
+
+5. Review temporary/patch code as strictly as production code. As these codes may  make their way to production without getting replaced ever. There is never an excuse for kludgy code
+
+6. Consider how the code will work in production. if the code was shipped to end-users on the next commit, it may be functionally incomplete, but it should NOT be broken.
+
+7. Check documentation, tests and build files. 
+
+8. Keep the priorities straight when making suggestions: code should be 
+	1. Functional first,
+	2. Clean and maintainable
+	3. Optimized
+
+Tips 
+
+1. Review fewer than 400 lines of code at a time
+2. Take your time. Insepection rate should be under 500LOC per hour
+3. Donot review for more than 60 minutes at once. 
+4. Set goals and capture metrics
+
+
+
+
+
