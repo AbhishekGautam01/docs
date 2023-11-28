@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Learning\\Compitative Programming\\CSharp-Code-Snippets\\CSharp-Code-Snippets\\CSharp-Code-Snippets.csproj": {}
+    "F:\\docs\\data-structure-algo\\src\\cs-basic-snippet\\cs-basic-snippets\\CSharp-Code-Snippets.csproj": {}
   },
   "projects": {
-    "G:\\Learning\\Compitative Programming\\CSharp-Code-Snippets\\CSharp-Code-Snippets\\CSharp-Code-Snippets.csproj": {
+    "F:\\docs\\data-structure-algo\\src\\cs-basic-snippet\\cs-basic-snippets\\CSharp-Code-Snippets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Learning\\Compitative Programming\\CSharp-Code-Snippets\\CSharp-Code-Snippets\\CSharp-Code-Snippets.csproj",
+        "projectUniqueName": "F:\\docs\\data-structure-algo\\src\\cs-basic-snippet\\cs-basic-snippets\\CSharp-Code-Snippets.csproj",
         "projectName": "CSharp-Code-Snippets",
-        "projectPath": "G:\\Learning\\Compitative Programming\\CSharp-Code-Snippets\\CSharp-Code-Snippets\\CSharp-Code-Snippets.csproj",
+        "projectPath": "F:\\docs\\data-structure-algo\\src\\cs-basic-snippet\\cs-basic-snippets\\CSharp-Code-Snippets.csproj",
         "packagesPath": "C:\\Users\\erabh\\.nuget\\packages\\",
-        "outputPath": "G:\\Learning\\Compitative Programming\\CSharp-Code-Snippets\\CSharp-Code-Snippets\\obj\\",
+        "outputPath": "F:\\docs\\data-structure-algo\\src\\cs-basic-snippet\\cs-basic-snippets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erabh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,16 +45,35 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

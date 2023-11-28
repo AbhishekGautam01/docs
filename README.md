@@ -53,3 +53,16 @@
       7. [`Merge Sorted Array`]
       8. [`Get Unique Elements`]
       9. [`Get Max & Min`]
+2. Numbers
+   1. [`Basic`](./data-structure-algo/src/numbers/basic.dib)
+      1. [`Check Of Prime`](./data-structure-algo/src/numbers/basic.dib)
+      2. [`Sum Of Digits`](./data-structure-algo/src/numbers/basic.dib)
+      3. [`Find Angle in time`](./data-structure-algo/src/numbers/basic.dib)
+      4. [`Find Nth Fibonaci`](./data-structure-algo/src/numbers/basic.dib)
+      5. [`Reverse`](./data-structure-algo/src/numbers/basic.dib)
+      6. [`Find missing numbers`](./data-structure-algo/src/numbers/basic.dib)
+      7. [`Factors`](./data-structure-algo/src/numbers/basic.dib)
+      8. [`Power`](./data-structure-algo/src/numbers/basic.dib)
+      9. [`GCD`](./data-structure-algo/src/numbers/basic.dib)
+      10. [`Palindrome`](./data-structure-algo/src/numbers/basic.dib)
+      11. [`Check Arm strong number`](./data-structure-algo/src/numbers/basic.dib)

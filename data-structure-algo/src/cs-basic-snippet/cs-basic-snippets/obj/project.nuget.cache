@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4dUQtzuqCj+SLTm4wouXz0AWdL5Ao89ENaC4HvaVos2zv9G7E2cE4s1tIvyAt4nwEDQ6550WrOt+NBRyGHdBRQ==",
+  "dgSpecHash": "ERVB2PbDUhKNwuMt04txW3Pn6XrcQzJsMeTf++4zw5/9gilreWSJPfTuAvHvwB7bTc4JSa45vAjYmnCg5z5vBA==",
   "success": true,
-  "projectFilePath": "G:\\Learning\\Compitative Programming\\CSharp-Code-Snippets\\CSharp-Code-Snippets\\CSharp-Code-Snippets.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\docs\\data-structure-algo\\src\\cs-basic-snippet\\cs-basic-snippets\\CSharp-Code-Snippets.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }
