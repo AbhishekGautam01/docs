@@ -6,6 +6,7 @@
 
 
 # Index
+[Searching Algorithms OpenGenus](https://iq.opengenus.org/tag/search-algorithm/)
 [GeeksForGeeks Searching Algorithm](https://www.geeksforgeeks.org/searching-algorithms/)
 
 ## Searching Algorithms

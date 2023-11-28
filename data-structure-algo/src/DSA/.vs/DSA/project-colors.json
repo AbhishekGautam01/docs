@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "11c5b582-ec06-4047-8a6f-1eb704e9fcf1": {
+      "ProjectGuid": "11c5b582-ec06-4047-8a6f-1eb704e9fcf1",
+      "DisplayName": "algorithms",
+      "ColorIndex": 0
+    },
+    "1b219e07-f9d8-4371-9e7b-43e98d955c08": {
+      "ProjectGuid": "1b219e07-f9d8-4371-9e7b-43e98d955c08",
+      "DisplayName": "data-structure",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

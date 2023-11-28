@@ -1,0 +1,16 @@
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\data-structure.exe
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\data-structure.deps.json
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\data-structure.runtimeconfig.json
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\data-structure.runtimeconfig.dev.json
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\data-structure.dll
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\ref\data-structure.dll
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\bin\Debug\net5.0\data-structure.pdb
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.csproj.AssemblyReference.cache
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.GeneratedMSBuildEditorConfig.editorconfig
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.AssemblyInfoInputs.cache
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.AssemblyInfo.cs
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.csproj.CoreCompileInputs.cache
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.dll
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\ref\data-structure.dll
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.pdb
+F:\dev\sc\data-structures-algorithms\src\DSA\data-structure\obj\Debug\net5.0\data-structure.genruntimeconfig.cache

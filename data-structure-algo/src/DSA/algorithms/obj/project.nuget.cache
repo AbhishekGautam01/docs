@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "fwrjIveyPiNbVWru6C78o0tXqPurumLSyzso2s++zoPcYdp9hPGvijK9Ur0B/CESk+K2y66dZ7OxPb7po2WliQ==",
+  "success": true,
+  "projectFilePath": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\algorithms\\algorithms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\erabh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -41,7 +41,31 @@
 [``OOD``](https://akshay-iyangar.github.io/system-design/)
 [``SD``](https://github.com/Jeevan-kumar-Raj/Grokking-System-Design)
 
-# DSA Problem Solves
+# DSA Theory
+## Algorithms
+1. [`Sorting`](./data-structure-algo/algorithm/sorting/main.md)
+   1. [`Bubble Sort`](./data-structure-algo/algorithm/sorting/bubble-sort.md)
+   2. [`Insertion Sort`](./data-structure-algo/algorithm/sorting/insertion-sort.md)
+   3. [`Merge Sort`](./data-structure-algo/algorithm/sorting/merge-sort.md)
+   4. [`Quick Sort`](./data-structure-algo/algorithm/sorting/quick-sort.md)
+   5. [`Recursive Bubble Sort`](./data-structure-algo/algorithm/sorting/recursive-bubble-sort.md)
+   6. [`Section Sort`](./data-structure-algo/algorithm/sorting/selection-sort.md)
+2. [`Searching`](./data-structure-algo/algorithm/searching/main.md)
+   1. [`Binary Search`](./data-structure-algo/algorithm/searching/binary-search.md)
+   2. [`Exponential Search`](./data-structure-algo/algorithm/searching/exponential-search.md)
+   3. [`Fibonacci Search`](./data-structure-algo/algorithm/searching/fibonacci-search.md)
+   4. [`Interpolation Search`](./data-structure-algo/algorithm/searching/interpolation-search.md)
+   5. [`Jump Search`](./data-structure-algo/algorithm/searching/jump-search.md)
+   6. [`Sub List Search`](./data-structure-algo/algorithm/searching/sublist-search.md)
+## Data Structure
+1. [`Singly Linked List`](./data-structure-algo/data-structure/singly-linked-list.md)
+2. [`Doubly Linked List`](./data-structure-algo/data-structure/doubly-linked-list.md)
+3. [`LRU Cache`](./data-structure-algo/data-structure/lru-cache.md)
+4. [`LFU Cache`](./data-structure-algo/data-structure/lfu-cache.md)
+5. [`Binary Heap`](./data-structure-algo/data-structure/binary-heap.md)
+
+
+# DSA Problem Solved
 1. Array 
    1. [`Basic`](./data-structure-algo/src/arrays/basic.dib)
       1. [`Left Circular Rotation`](./data-structure-algo/src/arrays/basic.dib)
