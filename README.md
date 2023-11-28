@@ -40,3 +40,16 @@
 # LINKS 
 [``OOD``](https://akshay-iyangar.github.io/system-design/)
 [``SD``](https://github.com/Jeevan-kumar-Raj/Grokking-System-Design)
+
+# DSA Problem Solves
+1. Array 
+   1. [`Basic`](./data-structure-algo/src/arrays/basic.dib)
+      1. [`Left Circular Rotation`](./data-structure-algo/src/arrays/basic.dib)
+      2. [`Right Circular Rotation`]
+      3. [`Target Two Sum`]
+      4. [`Convert 1D Array to 2D Array`]
+      5. [`Reverse`]
+      6. [`Find Second Largest`]
+      7. [`Merge Sorted Array`]
+      8. [`Get Unique Elements`]
+      9. [`Get Max & Min`]

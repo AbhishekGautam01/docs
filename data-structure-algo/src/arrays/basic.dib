@@ -1,0 +1,231 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!markdown
+
+# Left Circular Rotation of Array
+
+#!csharp
+
+int[] arr = {0,1,2,3,4};
+
+static int[] RotateLeft(int[] arr){
+    if(arr.Length > 1){
+        int temp = arr[0];
+        for(int i = 0; i < arr.Length - 1; i++)
+            arr[i]= arr[i+1];
+        arr[arr.Length - 1] = temp;
+    }
+    return arr;
+}
+
+void PrintArr(int[] arr){
+    for(int i = 0; i < arr.Length; i++)
+        Console.WriteLine(arr[i]);
+}
+
+var rotated = RotateLeft(arr);
+PrintArr(rotated);
+
+#!markdown
+
+# Right Circular Rotation
+
+#!csharp
+
+int[] input = {1, 2, 3, 4, 5};
+static int[] RotateRight(int[] input){
+    int length = input.Length;
+    if (length > 1)
+    {
+        int temp = input[length - 1];
+        for (int i = length-1; i > 0; i--)
+        {
+            input[i] = input[i-1];
+        }
+        input[0] = temp;
+    }
+    return input;
+}
+
+rotated = RotateRight(input);
+PrintArr(rotated);
+
+#!markdown
+
+# Target Two Sum
+1. Sort the Array
+2. Using `2 Pointer Approach`  create a left pointer and right pointer. 
+3. Start left from 0 and right from length - 1;
+4. while left < right keep matching to find sum.
+
+#!csharp
+
+bool TargetSum(int[] input, int sum){
+    Array.Sort(input);
+    int left = 0;
+    int right = input.Length - 1;
+
+    while(left < right){
+        if(input[left] + input[right] == sum)
+            return true;
+        else if (input[left] + input[right] < sum)
+            left++;
+        else 
+            right--;
+    }
+    return false;
+}
+
+var sumExists= TargetSum(input, 10);
+Console.WriteLine(sumExists);
+
+#!markdown
+
+# Convert 1D Array to 2D Array of given Dimensions
+
+#!csharp
+
+int[,] Convert1Dto2DArray(int[] array, int column, int row){
+    int[,] twoDArray = new int[column, row];
+    for(int i = 0; i < column; i++){
+        for(int j = 0; j < row; j++){
+            twoDArray[i, j] = array[i * row + j];
+        }
+    }
+    return twoDArray;
+}
+
+int[,] convertedArray = Convert1Dto2DArray(new int[]{1,2,3,4,5,6}, 3, 2);
+
+#!markdown
+
+# Reverse an Array
+
+#!csharp
+
+int[] Reverse(int[] array){
+    int left = 0; 
+    int right = array.Length-1;
+
+    while(left < right){
+        int temp = array[left];
+        array[left] = array[right];
+        array[right] = temp;
+        left++;
+        right--;
+    }
+    return array;
+}
+
+var reversedArray = Reverse(new int[]{1,2,3,4,5,6});
+PrintArr(reversedArray);
+
+#!markdown
+
+# Second Largest Element
+
+#!csharp
+
+int SecondLargest(int[] array){
+    int largest = array[0];
+    int secondLargest = array[0];
+    for(int i = 0; i < array.Length; i++){
+        if(array[i] > largest){
+            secondLargest = largest;
+            largest = array[i];
+        } else if(array[i]> secondLargest && array[i] != largest)
+            secondLargest = array[i];
+    }
+    return secondLargest;
+}
+
+Console.WriteLine(SecondLargest(new []{1,2,4,29,19,27,26,0,1,29,27}))
+
+#!markdown
+
+# Merge Sorted Array
+
+#!csharp
+
+int[] MergeSortedArray(int[] first, int[] second){
+    int[] mergedArray = new int[first.Length + second.Length];
+    int i= 0, left = 0, right = 0;
+    while(left < first.Length && right < second.Length){
+        if(first[left] <= second[right]){
+            mergedArray[i]= first[left];
+            left++;
+        } else {
+            mergedArray[i] = second[right];
+            right++;
+        }
+        i++;
+    }
+    
+    if(first.Length != left){
+        for(int x = left; x < first.Length; x++){
+            mergedArray[i] = first[x];
+            i++;
+        }
+    }
+
+    if(second.Length  != right){
+        for(int y = right; y < second.Length; y++){
+            mergedArray[i] = second[y];
+            i++;
+        }
+    }
+
+    return mergedArray;
+}
+
+var mergedArr = MergeSortedArray(new int[]{1,3,5,7, 11,13}, new int[]{2,4,6,8,9,10,12});
+PrintArr(mergedArr);
+
+#!markdown
+
+# Get Unique Elements
+
+#!csharp
+
+using System.Collections.Generic;
+
+int[] GetUnqiueElements(int[] source){
+    Array.Sort(source);
+    int[] result = new int[source.Length];
+    int resultIndex = 0;
+    for(int i = 0; i < source.Length; i++){
+        result[resultIndex] = source[i];
+        resultIndex++;
+
+        while(i < source.Length-1 && source[i] == source[i+1])
+            i++;
+    }
+    return result;
+}
+
+var result = GetUnqiueElements(new int[]{1,4,2,1,5,9,4,6,9,7,10,0});
+PrintArr(result);
+
+#!markdown
+
+# Get Max Min
+
+#!csharp
+
+Tuple<int, int> GetMaxMin(int[] source){
+    int smallest = source[0];
+    int largest = source[0];
+
+    for(int i = 1; i < source.Length; i++){
+        if(source[i] < smallest)
+            smallest = source[i];
+        else if(source[i] > largest)
+            largest = source[i];
+    }
+    return new Tuple<int, int>(smallest, largest);
+}
+
+var resut = GetMaxMin(new int[]{1,2,3,4,5,6,78});
+Console.WriteLine($"{resut.Item1} --- {resut.Item2}");
