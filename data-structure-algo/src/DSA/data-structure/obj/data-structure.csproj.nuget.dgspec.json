@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\data-structure\\data-structure.csproj": {}
+    "F:\\docs\\data-structure-algo\\src\\DSA\\data-structure\\data-structure.csproj": {}
   },
   "projects": {
-    "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\data-structure\\data-structure.csproj": {
+    "F:\\docs\\data-structure-algo\\src\\DSA\\data-structure\\data-structure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\data-structure\\data-structure.csproj",
+        "projectUniqueName": "F:\\docs\\data-structure-algo\\src\\DSA\\data-structure\\data-structure.csproj",
         "projectName": "data-structure",
-        "projectPath": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\data-structure\\data-structure.csproj",
+        "projectPath": "F:\\docs\\data-structure-algo\\src\\DSA\\data-structure\\data-structure.csproj",
         "packagesPath": "C:\\Users\\erabh\\.nuget\\packages\\",
-        "outputPath": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\data-structure\\obj\\",
+        "outputPath": "F:\\docs\\data-structure-algo\\src\\DSA\\data-structure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erabh\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -348,3 +348,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+data-structure-algo/src/DSA/.vs/DSA/DesignTimeBuild/.dtbcache.v2
+data-structure-algo/src/DSA/.vs/DSA/DesignTimeBuild/.dtbcache.v2

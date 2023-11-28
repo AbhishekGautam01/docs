@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\algorithms\\algorithms.csproj",
+      "projectUniqueName": "F:\\docs\\data-structure-algo\\src\\DSA\\algorithms\\algorithms.csproj",
       "projectName": "algorithms",
-      "projectPath": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\algorithms\\algorithms.csproj",
+      "projectPath": "F:\\docs\\data-structure-algo\\src\\DSA\\algorithms\\algorithms.csproj",
       "packagesPath": "C:\\Users\\erabh\\.nuget\\packages\\",
-      "outputPath": "F:\\dev\\source-code\\data-structures-algorithms\\src\\DSA\\algorithms\\obj\\",
+      "outputPath": "F:\\docs\\data-structure-algo\\src\\DSA\\algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\erabh\\AppData\\Roaming\\NuGet\\NuGet.Config",
