@@ -100,3 +100,11 @@
    5. [`Check Anagram`](./dsa/grokking-interview-patterns/0-warmup.md#problem-5-check-anagram)
    6. [`Shortest Word Distance`](./dsa/grokking-interview-patterns/0-warmup.md#problem-6-shortest-word-distance)
    7. [`Good Pairs`](./dsa/grokking-interview-patterns/0-warmup.md#problem-7-good-pairs)
+   
+2. [`Two Pointers`](./dsa/grokking-interview-patterns/1-two-pointers.md)
+   1. [`Target Sum Two Numbers`](./dsa/grokking-interview-patterns/1-two-pointers.md#target-sum)
+   2. [`Find Non Duplicate instances`](./dsa/grokking-interview-patterns/1-two-pointers.md#find-non-duplicate-instances)
+   3. [`Squaring Sorted Array`](./dsa/grokking-interview-patterns/1-two-pointers.md#squaring-sorted-array)
+   4. [`Triplet Sum to Zero`](./dsa/grokking-interview-patterns/1-two-pointers.md#triplet-sum-to-zero)
+   5. [`Triplet Sum close to target`](./dsa/grokking-interview-patterns/1-two-pointers.md#triplet-sum-closed-to-target)
+   6. [`Triplet with smallest Sum`](./dsa/grokking-interview-patterns/1-two-pointers.md#triplets-with-smallest-sum)
