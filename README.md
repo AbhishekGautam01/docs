@@ -90,3 +90,13 @@
       9. [`GCD`](./data-structure-algo/src/numbers/basic.dib)
       10. [`Palindrome`](./data-structure-algo/src/numbers/basic.dib)
       11. [`Check Arm strong number`](./data-structure-algo/src/numbers/basic.dib)
+
+# Grokking Patterns for System Design 
+1. [`Warmup`](./dsa/grokking-interview-patterns/0-warmup.md)
+   1. [`Contains Duplicate`](./dsa/grokking-interview-patterns/0-warmup.md#problem-1-contains-duplicate)
+   2. [`Pangram`](./dsa/grokking-interview-patterns/0-warmup.md#problem-2-pangram)
+   3. [`Reverse Vowels`](./dsa/grokking-interview-patterns/0-warmup.md#problem-3-reverse-vowels)
+   4. [`Check Palindrome`](./dsa/grokking-interview-patterns/0-warmup.md#problem-4-check-palindrome)
+   5. [`Check Anagram`](./dsa/grokking-interview-patterns/0-warmup.md#problem-5-check-anagram)
+   6. [`Shortest Word Distance`](./dsa/grokking-interview-patterns/0-warmup.md#problem-6-shortest-word-distance)
+   7. [`Good Pairs`](./dsa/grokking-interview-patterns/0-warmup.md#problem-7-good-pairs)
