@@ -37,6 +37,22 @@
 [`High Scalability(Learn System Design)`](http://highscalability.com/)
 [`Designing Data Intensive Application Book`](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
 
+# High Level System Design
+1. [Appendix](./high-level-design/appendix/)
+   1. [`Load Balancers`](./high-level-design/appendix/1-load-balancer.md)
+      1. [Terminologies](./high-level-design/appendix/1-load-balancer.md#terminologies)
+      2. [`How Load Balancer Words`](./high-level-design/appendix/1-load-balancer.md#how-load-balancers-works)
+      3. [`Uses`](./high-level-design/appendix/1-load-balancer.md#uses-of-load-balancer)
+      4. [`Load Balancing Algorithms`](./high-level-design/appendix/1-load-balancer.md#load-balancing-algorithms)
+         1. [`Round Robin`](./high-level-design/appendix/1-load-balancer.md#round-robin---the-simplest)
+         2. [`Least Connections`](./high-level-design/appendix/1-load-balancer.md#least-connections)
+         3. [`Weighted Round Robins`](./high-level-design/appendix/1-load-balancer.md#weighted-round-robin)
+         4. [`Weighted least Connections](./high-level-design/appendix/1-load-balancer.md#weighted-least-connections)
+         5. [`IP hasing`](./high-level-design/appendix/1-load-balancer.md#ip-hashing)
+         6. [`Least Response Time`](./high-level-design/appendix/1-load-balancer.md#least-response-time)
+         7. [`Custom Load`](./high-level-design/appendix/1-load-balancer.md#custom-load)
+         8. [`Random`](./high-level-design/appendix/1-load-balancer.md#random)
+         9. [`Least Bandwidth`](./high-level-design/appendix/1-load-balancer.md#least-bandwidth)
 # LINKS 
 [``OOD``](https://akshay-iyangar.github.io/system-design/)
 [``SD``](https://github.com/Jeevan-kumar-Raj/Grokking-System-Design)
