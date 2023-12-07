@@ -1,0 +1,295 @@
+{
+	"id": "0aea9252-00ec-428c-bdba-a48823a872f4",
+	"name": "Trello API Automation",
+	"timestamp": "2022-09-03T13:09:01.870Z",
+	"collection_id": "17404105-ced95117-0e09-4218-a568-71c2c7750c74",
+	"folder_id": 0,
+	"environment_id": "17404105-00d90a39-ec40-49d5-8538-4bbeaacec057",
+	"totalPass": 17,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "82bfdcb4-e2d6-46ba-82b0-6b0aabd73f62",
+			"name": "Create Board",
+			"url": "https://api.trello.com/1/boards/?name=My%20board%201&key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 471,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Board is created with correct Name": true,
+				"Board should be private": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Board is created with correct Name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Board should be private": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				471
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Board is created with correct Name": true,
+					"Board should be private": true
+				}
+			]
+		},
+		{
+			"id": "99a47b73-e4d3-4f91-ab61-f80a7c871c93",
+			"name": "Create TODO List",
+			"url": "https://api.trello.com/1/lists?name=TODO&idBoard=631351e918140801333b60fb&key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 367,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"STatus is 200": true,
+				"List should be created": true,
+				"List was created inside the board": true
+			},
+			"testPassFailCounts": {
+				"STatus is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List should be created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List was created inside the board": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				367
+			],
+			"allTests": [
+				{
+					"STatus is 200": true,
+					"List should be created": true,
+					"List was created inside the board": true
+				}
+			]
+		},
+		{
+			"id": "17203c79-e2c3-4674-aff2-3bb19e74ffc0",
+			"name": "Create Card in TODO List",
+			"url": "https://api.trello.com/1/cards?name=Learn%20Postman&idList=631351e9c1d1cf00591df9cb&key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 493,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Card should be created": true,
+				"Card should have no votes or attachments": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Card should be created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Card should have no votes or attachments": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				493
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Card should be created": true,
+					"Card should have no votes or attachments": true
+				}
+			]
+		},
+		{
+			"id": "7f3ca439-4db1-4b84-96f2-6ed16f5c2ce7",
+			"name": "Create DONE List",
+			"url": "https://api.trello.com/1/lists?name=DONE&idBoard=631351e918140801333b60fb&key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 353,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"STatus is 200": true,
+				"List should be created": true,
+				"List was created inside the board": true
+			},
+			"testPassFailCounts": {
+				"STatus is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List should be created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List was created inside the board": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				353
+			],
+			"allTests": [
+				{
+					"STatus is 200": true,
+					"List should be created": true,
+					"List was created inside the board": true
+				}
+			]
+		},
+		{
+			"id": "e30f83ad-f70b-4a45-adcd-f77555beba76",
+			"name": "Move Card in Done List",
+			"url": "https://api.trello.com/1/cards/631351ea91d4600363f0ae48?idList=631351ea0185e401d59a696c&key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 437,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"status code is 200": true,
+				"Card should have new list": true,
+				"Card should preserve properties": true
+			},
+			"testPassFailCounts": {
+				"status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Card should have new list": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Card should preserve properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				437
+			],
+			"allTests": [
+				{
+					"status code is 200": true,
+					"Card should have new list": true,
+					"Card should preserve properties": true
+				}
+			]
+		},
+		{
+			"id": "847f9bc5-521b-4700-9a93-51441361a2e3",
+			"name": "Delete Board",
+			"url": "https://api.trello.com/1/boards/631351e918140801333b60fb?key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 727,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				727
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2d7ea93c-68ab-47fe-a33f-27d424e6ecd6",
+			"name": "Retrieve Deleted Board",
+			"url": "https://api.trello.com/1/boards/631351e918140801333b60fb?key=312fbfc1486bcc6802598b2af18c6019&token=1cf2ad337953e9e85c8a6bd43307ff199784f78befb950b9d1f092e46c1216dd",
+			"time": 296,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Board should not exist": true
+			},
+			"testPassFailCounts": {
+				"Board should not exist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Board should not exist": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3144,
+	"collection": {
+		"requests": [
+			{
+				"id": "82bfdcb4-e2d6-46ba-82b0-6b0aabd73f62",
+				"method": "POST"
+			},
+			{
+				"id": "99a47b73-e4d3-4f91-ab61-f80a7c871c93",
+				"method": "POST"
+			},
+			{
+				"id": "17203c79-e2c3-4674-aff2-3bb19e74ffc0",
+				"method": "POST"
+			},
+			{
+				"id": "7f3ca439-4db1-4b84-96f2-6ed16f5c2ce7",
+				"method": "POST"
+			},
+			{
+				"id": "e30f83ad-f70b-4a45-adcd-f77555beba76",
+				"method": "PUT"
+			},
+			{
+				"id": "847f9bc5-521b-4700-9a93-51441361a2e3",
+				"method": "DELETE"
+			},
+			{
+				"id": "2d7ea93c-68ab-47fe-a33f-27d424e6ecd6",
+				"method": "GET"
+			}
+		]
+	}
+}

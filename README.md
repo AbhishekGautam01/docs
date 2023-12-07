@@ -1,5 +1,21 @@
 # Index 
-0. [`Agile Story Splitting Workflow`](./agile/Story-Splitting-Flowchart.pdf)
+1. [`Agile`](./README.md#agile)
+2. [`Database`](./README.md#database)
+   1. [`SQL vs NoSQL`](./README.md#database)
+   2. [`SQL`](./README.md#sql)
+   3. [`Mongo DB`](./README.md#mongo-db)
+   4. [`Cosmos DB`](./README.md#cosmos-db)
+3. [`System Design`](./README.md#system-design)
+   1. [`Microservices`](./README.md#microservices)
+   2. [`SOLID`](./README.md#solid)
+   3. [`High Level Design`](./README.md#high-level-system-design)
+   4. [`Low Level Design`](./README.md#low-level-design)
+4. [`Testing`](./README.md#testing)
+   1. [`Postman API Automation Testing`](./README.md#postman-api-automation-testing)
+<br/>
+
+# Agile
+1. [`Agile Story Splitting Workflow`](./agile/Story-Splitting-Flowchart.pdf)
 
 # [`Database`](./databases/)
 1. **[`Data Storage on all cloud platforms`](./databases/sql-vs-nosql-on-all-cloud.jpeg)**
@@ -202,3 +218,72 @@
    4. [`Triplet Sum to Zero`](./dsa/grokking-interview-patterns/1-two-pointers.md#triplet-sum-to-zero)
    5. [`Triplet Sum close to target`](./dsa/grokking-interview-patterns/1-two-pointers.md#triplet-sum-closed-to-target)
    6. [`Triplet with smallest Sum`](./dsa/grokking-interview-patterns/1-two-pointers.md#triplets-with-smallest-sum)
+
+
+# [`Testing`](./testing/)
+## [`Postman API Automation Testing`](./testing/postman/Index.md)
+1. [`Overview.md`](./testing/postman/testing/postman/doc/0-overiview.md)
+    1. [`API - Application Programming Interface`](./testing/postman/testing/postman/doc/0-overiview.md#API--Application-Programming-Interface)
+    2. [`First API Call using Postman`](./testing/postman/testing/postman/doc/0-overiview.md#First-API-Call-using-Postman)
+    3. [`Most common issues with Postman`](./testing/postman/testing/postman/doc/0-overiview.md#Most-common-issues-with-Postman)
+    4. [`Postman web`](./testing/postman/testing/postman/doc/0-overiview.md#Postman-web)
+    5. [`Http`](./testing/postman/testing/postman/doc/0-overiview.md#Http)
+    6. [`Postman Landscape`](./testing/postman/testing/postman/doc/0-overiview.md#Postman-Landscape)
+    <br/>
+2. [`Creating REST API requests with Postman`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md)
+    1. [`Storing Configuration in Variables`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Storing-Configuration-in-Variables)
+    1. [`Modifying Collection variables`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Modifying-Collection-variables)
+    1. [`Get Request`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Get-Request)
+    1. [`Visualizing Response`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Visualizing-Response)
+    1. [`Query Parameter`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Query-Parameter)
+    1. [`Shortcuts`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Shortcuts)
+    1. [`Path Variables`](./testing/postman/testing/postman/doc/1-rest-request-with-postman.md#Path-Variables)
+    1. [`Post`](./testing/postman/doc/1-rest-request-with-postman.md#Post)
+    1. [`GET vs POST`](./testing/postman/doc/1-rest-request-with-postman.md#GET-vs-POST)
+    1. [`API Authentication`](./testing/postman/doc/1-rest-request-with-postman.md#API-Authentication)
+    1. [`Using Random data in request`](./testing/postman/doc/1-rest-request-with-postman.md#Using-Random-data-in-request)
+    1. [`Http Headers`](./testing/postman/doc/1-rest-request-with-postman.md#Http-Headers)
+    1. [`Headers vs query param vs path param`](./testing/postman/doc/1-rest-request-with-postman.md#Headers-vs-query-param-vs-path-param)
+    1. [`Sharing postman collection`](./testing/postman/doc/1-rest-request-with-postman.md#Sharing-postman-collection)
+    1. [`Patch Request`](./testing/postman/doc/1-rest-request-with-postman.md#Patch-Request)
+    1. [`HEAD Request Message`](./testing/postman/doc/1-rest-request-with-postman.md#HEAD-Request-Message)
+    <br/>
+
+3. **[`Trello API Testing`](./testing/postman/doc/2-trello-api.md)**
+<br/>
+
+4. **[`API Test Scripts`](./testing/postman/doc/3-test-scripts.md)**
+<br/>
+
+5. **[`Test Scripts with Variables & Variables Scopes`](./testing/postman/doc/4-test-scripts-with-variables.md)**
+    1. [`Types of Variables`](./testing/postman/doc/4-test-scripts-with-variables.md#Types-of-Variables)
+    1. [`Accessing variables in the scripts`](./testing/postman/doc/4-test-scripts-with-variables.md#Accessing-variables-in-the-scripts)
+    1. [`Global Variables`](./testing/postman/doc/4-test-scripts-with-variables.md#Global-Variables)
+    1. [`Environment Variables`](./testing/postman/doc/4-test-scripts-with-variables.md#Environment-Variables)
+    1. [`Pre-request scripts`](./testing/postman/doc/4-test-scripts-with-variables.md#Pre-request-scripts)
+    1. [`Variables types`](./testing/postman/doc/4-test-scripts-with-variables.md#Variables---types)
+    1. [`Setup different URL to test against different environments`](./testing/postman/doc/4-test-scripts-with-variables.md#Setup-different-URL-to-test-against-different-environments)
+    1. [`Debugging tests`](./testing/postman/doc/4-test-scripts-with-variables.md#Debugging-tests)
+<br/>
+
+6. [`Advance Assertions`](./testing/postman/doc/5-advance-assertions.md)
+    1. [`Chai Assertion Library`](./testing/postman/doc/5-advance-assertions.md#chai-assertion-library)
+    1. [`Assertions`](./testing/postman/doc/5-advance-assertions.md#assertions)
+    1. [`Assertions on Array`](./testing/postman/doc/5-advance-assertions.md#assertions-on-array)
+    1. [`Assertions on nested objects`](./testing/postman/doc/5-advance-assertions.md#assertions-on-nested-objects)
+    1. [`Testing Headers & Cookies`](./testing/postman/doc/5-advance-assertions.md#testing-headers--cookies)
+<br/>
+
+7. [`Automatically running tests`](./testing/postman/doc/6-automatically-running-tests.md)
+    1. [`Postman Collection runner`](./testing/postman/doc/6-automatically-running-tests.md#postman-collection-runner)
+    1. [`Postman Monitor`](./testing/postman/doc/6-automatically-running-tests.md#postman-monitor)
+    1. [`Automating with Newman`](./testing/postman/doc/6-automatically-running-tests.md#automating-with-newman)
+        1. [`Installing new man`](./testing/postman/doc/6-automatically-running-tests.md#installing-new-man)
+        1. [`Running a collection in postman`](./testing/postman/doc/6-automatically-running-tests.md#running-a-collection-in-postman)
+        1. [`Accessing collections from newman`](./testing/postman/doc/6-automatically-running-tests.md#accessing-collections-from-newman)
+        1. [`Specifying environments with newman`](./testing/postman/doc/6-automatically-running-tests.md#specifying-environments-with-newman)
+        1. [`Generating Html reports from newman`](./testing/postman/doc/6-automatically-running-tests.md#generating-html-reports-from-newman)
+<br/>
+
+8. [`Workflows and scenarios`](./testing/postman/doc/8-workflows-and-scenarios.md)
+    1. [`Multiple worksflows within same collection : https://www.youtube.com/watch?v=FWYKOR0Zj28`](./testing/postman/doc/8-workflows-and-scenarios.md#multiple-worksflows-within-same-collection--httpswwwyoutubecomwatchvfwykor0zj28)
