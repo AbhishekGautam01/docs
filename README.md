@@ -1,6 +1,56 @@
 # Index 
 0. [`Agile Story Splitting Workflow`](./agile/Story-Splitting-Flowchart.pdf)
-   
+
+# [`Database`](./databases/)
+1. **[`Data Storage on all cloud platforms`](./databases/sql-vs-nosql-on-all-cloud.jpeg)**
+2. **[`SQL vs NoSQL`](./databases/nosql-vs-sql/main.md)**
+## [`SQL`](./databases/sql/)
+   0. [`Index`](./databases/sql/main.md#index)
+      1. [`History of Data`](./databases/sql/main.md#history-of-data)
+      2. [`Types of Data`](./databases/sql/main.md#types-of-database)
+      3. [`SQL Fundamentals`](./databases/sql/main.md#sql-fundamentals)
+      4. [`Relational Models`](./databases/sql/main.md#relational-model)
+      5. [`OTLP vs OLAP`](./databases/sql/main.md#otlp-vs-olap)
+      6. [`Command Classification`](./databases/sql/main.md#commands-classification)
+   1. [`CAP Theorem`](./databases/sql/0.1.CAP.md)
+   2. [`ACID Transactions`](./databases/sql/0.ACID.md)
+   3. [`DDL Operations`](./databases/sql/1.DDL.md)
+   4. [`DML Operations`](./databases/sql/2.DML.md)
+   5.  [`Tables`](./databases/sql/Tables.md)
+   6. [`Constraints`](./databases/sql/Constraints.md)
+   7.  [`Keys`](./databases/sql/Keys.md)
+   8.  [`Joins`](./databases/sql/Joins.md)
+   9.  [`Sub Query`](./databases/sql/SubQuery.md)
+   10. [`Union`](./databases/sql/Union.md)
+   11. [`Built In Functions`](./databases/sql/Built-In%20Function.md)
+   12. [`CTE - Common Table Expressions`](./databases/sql/CTE.md)
+   13. [`Views`](./databases/sql/Views.md)
+   14. [`Indexing`](./databases/sql/Indexing.md)
+   15. [`Locking`](./databases/sql/Locking.md)
+   16. [`Partitioning`](./databases/sql/Partitioning.md)
+   17. [`Ranking`](./databases/sql/Ranking.md)
+   18. [`Sample-Queries-Examples`](./databases/sql/sample-queries.md)
+   19. [`Seeding Database Script`](./databases/sql/seed-db-script.sql)
+   20. [`Sharding`](./databases/sql/Sharding.md)
+<br/>
+
+## [`Mongo DB`](./databases/mongo-db/)
+<br/>
+
+## [`Cosmos DB`](./databases/cosmos-db/)
+1. **[`Walkthrough`](./databases/cosmos-db/1-walkthrough.md)**
+   1. [`Categories of NoSQL Databases`](./databases/cosmos-db/1-walkthrough.md#categories-of-nosql-databases)
+   2. [`CosmosDb Features`](./databases/cosmos-db/1-walkthrough.md#azure-cosmos-db-features)
+   3. [`Multi API & Multi Model`](./databases/cosmos-db/1-walkthrough.md#multi-model--multi-apis)
+   4. [`5 Well Defined Consistency Levels`](./databases/cosmos-db/1-walkthrough.md#5-well-defined-consistency-levels)
+   5. [`Resource Hierarchy`](./databases/cosmos-db/1-walkthrough.md#resource-hierarchy)
+   6. [`RUs`](./databases/cosmos-db/1-walkthrough.md#request-unitsrus)
+   7. [`Database Partitioning`](./databases/cosmos-db/1-walkthrough.md#database-partitioning)
+2. **[`Database Setup`](./databases/cosmos-db/2-SetUp.md)**
+3. **[`Schema Design Strategies`](./databases/cosmos-db/3-Schema_Design-Strategies.md)**
+4. **[`Real World Data Modeling Example`](./databases/cosmos-db/4-real-world-example.md)**
+
+
 # [`System Design`](./system-design/)
 ## [`Microservices`](./system-design/microservices/)
 1. **[`Microservices Index`](./system-design/microservices/index.md)**
@@ -49,22 +99,22 @@
 <br/>
 
 ## [`High Level System Design`](./system-design/hld/)
-0. [`General Tips`](./system-design/hld/0_general_tips.md)
-1. [`Appendix`](./high-level-design/appendix/)
-   1. **[`Load Balancers`](./high-level-design/appendix/1-load-balancer.md)**
-      1. [`Terminologies`](./high-level-design/appendix/1-load-balancer.md#terminologies)
-      2. [`How Load Balancer Words`](./high-level-design/appendix/1-load-balancer.md#how-load-balancers-works)
-      3. [`Uses`](./high-level-design/appendix/1-load-balancer.md#uses-of-load-balancer)
-      4. [`Load Balancing Algorithms`](./high-level-design/appendix/1-load-balancer.md#load-balancing-algorithms)
-         1. [`Round Robin`](./high-level-design/appendix/1-load-balancer.md#round-robin---the-simplest)
-         2. [`Least Connections`](./high-level-design/appendix/1-load-balancer.md#least-connections)
-         3. [`Weighted Round Robins`](./high-level-design/appendix/1-load-balancer.md#weighted-round-robin)
-         4. [`Weighted least Connections`](./high-level-design/appendix/1-load-balancer.md#weighted-least-connections)
-         5. [`IP hasing`](./high-level-design/appendix/1-load-balancer.md#ip-hashing)
-         6. [`Least Response Time`](./high-level-design/appendix/1-load-balancer.md#least-response-time)
-         7. [`Custom Load`](./high-level-design/appendix/1-load-balancer.md#custom-load)
-         8. [`Random`](./high-level-design/appendix/1-load-balancer.md#random)
-         9. [`Least Bandwidth`](./high-level-design/appendix/1-load-balancer.md#least-bandwidth)
+0. [`General Tips`](./system-design/system-design/hld/0_general_tips.md)
+1. [`Appendix`](./system-design/high-level-design/appendix/)
+   1. **[`Load Balancers`](./system-design/high-level-design/appendix/1-load-balancer.md)**
+      1. [`Terminologies`](./system-design/high-level-design/appendix/1-load-balancer.md#terminologies)
+      2. [`How Load Balancer Words`](./system-design/high-level-design/appendix/1-load-balancer.md#how-load-balancers-works)
+      3. [`Uses`](./system-design/high-level-design/appendix/1-load-balancer.md#uses-of-load-balancer)
+      4. [`Load Balancing Algorithms`](./system-design/high-level-design/appendix/1-load-balancer.md#load-balancing-algorithms)
+         1. [`Round Robin`](./system-design/high-level-design/appendix/1-load-balancer.md#round-robin---the-simplest)
+         2. [`Least Connections`](./system-design/high-level-design/appendix/1-load-balancer.md#least-connections)
+         3. [`Weighted Round Robins`](./system-design/high-level-design/appendix/1-load-balancer.md#weighted-round-robin)
+         4. [`Weighted least Connections`](./system-design/high-level-design/appendix/1-load-balancer.md#weighted-least-connections)
+         5. [`IP hasing`](./system-design/high-level-design/appendix/1-load-balancer.md#ip-hashing)
+         6. [`Least Response Time`](./system-design/high-level-design/appendix/1-load-balancer.md#least-response-time)
+         7. [`Custom Load`](./system-design/high-level-design/appendix/1-load-balancer.md#custom-load)
+         8. [`Random`](./system-design/high-level-design/appendix/1-load-balancer.md#random)
+         9. [`Least Bandwidth`](./system-design/high-level-design/appendix/1-load-balancer.md#least-bandwidth)
 <br/>
 
 ## [`Low Level Design`](./system-design/lld/)
