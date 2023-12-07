@@ -3,13 +3,15 @@
    
 # Microservices
 1. [`Microservices Index`](./microservices/index.md)
-      1. [`Mind Map`](./microservices/index.md#mind-map-microservice-patterns)
-      2. [`Data Management Patterns`](./microservices/index.md#data-management-patterns)
-      3. [`Design & Implementation Patterns`](./microservices/index.md#design--implementation-pattern)
-      4. [`Messaging Patterns`](./microservices/index.md#messaging-patterns)
+      1. [`Categories of Microservices Patterns`](./microservices/index.md#category-0f-microservices-patterns)
+      2. [`Mind Map`](./microservices/index.md#mind-map-microservice-patterns)
+      3. [`Data Management Patterns`](./microservices/index.md#data-management-patterns)
+      4. [`Design & Implementation Patterns`](./microservices/index.md#design--implementation-pattern)
+      5. [`Messaging Patterns`](./microservices/index.md#messaging-patterns)
+      6. [`Catalog of microservices Patterns`](./microservices/index.md#catalog-0f-microservices-patterns)
 <br/>
 
-2. [`Mind Mapping Microservices Patterns Part 1`](./microservices/0-microservices-concerns-pt1.md)
+1. [`Mind Mapping Microservices Patterns Part 1`](./microservices/0-microservices-concerns-pt1.md)
    1. [`How to decompose the application into microservices`](./microservices/0-microservices-concerns-pt1.md#how-to-decompose-the-application-into-microservices)
    2. [`Decomposition Design Pattern`](./microservices/0-microservices-concerns-pt1.md#decomposition-design-pattern)
    3. [`Database Architecture`](./microservices/0-microservices-concerns-pt1.md#database-architecture)
@@ -20,18 +22,18 @@
    8. [`Microservices Communication`](./microservices/0-microservices-concerns-pt1.md#how-services-communicate-with-each-other)
 <br/>
 
-4. [`Mind Mapping Microservices Pattern Part 2`](./microservices/0-microservices-concerns-pt2.md)
+1. [`Mind Mapping Microservices Pattern Part 2`](./microservices/0-microservices-concerns-pt2.md)
    1. [`Non Functional Requirements`](./microservices/0-microservices-concerns-pt2.md#what-is-happening-within-services)
    2. [`Are service behaving well`](./microservices/0-microservices-concerns-pt2.md#are-services-behaving-well)
    3. [`Resilience`](./microservices/0-microservices-concerns-pt2.md#how-to-make-services-more-resilient)
 <br/>
 
-5. [`Orchestration vs Choreography`](./microservices/0-orchestration-vs-choreography.md)
+1. [`Orchestration vs Choreography`](./microservices/0-orchestration-vs-choreography.md)
    1. [`Orchestration`](./microservices/0-orchestration-vs-choreography.md#orchestration)
    2. [`Choreography`](./microservices/0-orchestration-vs-choreography.md#choreography)
 <br/>
  
-6. [`Strangler Fig Pattern`](./microservices/1-strangler-fig-pattern.md)
+1. [`Strangler Fig Pattern`](./microservices/1-strangler-fig-pattern.md)
 
 # design
 [`High Scalability(Learn System Design)`](http://highscalability.com/)
