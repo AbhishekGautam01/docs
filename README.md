@@ -5,12 +5,14 @@
    2. [`SQL`](./README.md#sql)
    3. [`Mongo DB`](./README.md#mongo-db)
    4. [`Cosmos DB`](./README.md#cosmos-db)
-3. [`System Design`](./README.md#system-design)
+3. [`Architecture`](./README.md#architecture)
+   1. [`Web Service Protocols`](./README.md#web-protocols)
+4. [`System Design`](./README.md#system-design)
    1. [`Microservices`](./README.md#microservices)
    2. [`SOLID`](./README.md#solid)
    3. [`High Level Design`](./README.md#high-level-system-design)
    4. [`Low Level Design`](./README.md#low-level-design)
-4. [`Testing`](./README.md#testing)
+5. [`Testing`](./README.md#testing)
    1. [`Postman API Automation Testing`](./README.md#postman-api-automation-testing)
 <br/>
 
@@ -67,6 +69,15 @@
 4. **[`Real World Data Modeling Example`](./databases/cosmos-db/4-real-world-example.md)**
 
 
+# [`Architecture`](./architecture/)
+## [`Web Protocols`](./architecture/web-protocols/)
+   1. **[`REST GraphQL gRPC Overview`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md)**
+      1. [`Web APIs`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#web-apis)
+      2. [`REST`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#rest-apis-representational-state-transfer)
+      3. [`GraphQL`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#graphql)
+      4. [`gRPC`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#grpc)
+      5. [`Comparing Web APIs`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#comparing-web-apis)
+      6. [`Flow Chart`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#comparing-web-apis)
 # [`System Design`](./system-design/)
 ## [`Microservices`](./system-design/microservices/)
 1. **[`Microservices Index`](./system-design/microservices/index.md)**
@@ -116,21 +127,21 @@
 
 ## [`High Level System Design`](./system-design/hld/)
 0. [`General Tips`](./system-design/system-design/hld/0_general_tips.md)
-1. [`Appendix`](./system-design/high-level-design/appendix/)
-   1. **[`Load Balancers`](./system-design/high-level-design/appendix/1-load-balancer.md)**
-      1. [`Terminologies`](./system-design/high-level-design/appendix/1-load-balancer.md#terminologies)
-      2. [`How Load Balancer Words`](./system-design/high-level-design/appendix/1-load-balancer.md#how-load-balancers-works)
-      3. [`Uses`](./system-design/high-level-design/appendix/1-load-balancer.md#uses-of-load-balancer)
-      4. [`Load Balancing Algorithms`](./system-design/high-level-design/appendix/1-load-balancer.md#load-balancing-algorithms)
-         1. [`Round Robin`](./system-design/high-level-design/appendix/1-load-balancer.md#round-robin---the-simplest)
-         2. [`Least Connections`](./system-design/high-level-design/appendix/1-load-balancer.md#least-connections)
-         3. [`Weighted Round Robins`](./system-design/high-level-design/appendix/1-load-balancer.md#weighted-round-robin)
-         4. [`Weighted least Connections`](./system-design/high-level-design/appendix/1-load-balancer.md#weighted-least-connections)
-         5. [`IP hasing`](./system-design/high-level-design/appendix/1-load-balancer.md#ip-hashing)
-         6. [`Least Response Time`](./system-design/high-level-design/appendix/1-load-balancer.md#least-response-time)
-         7. [`Custom Load`](./system-design/high-level-design/appendix/1-load-balancer.md#custom-load)
-         8. [`Random`](./system-design/high-level-design/appendix/1-load-balancer.md#random)
-         9. [`Least Bandwidth`](./system-design/high-level-design/appendix/1-load-balancer.md#least-bandwidth)
+1. [`Appendix`](./system-design/hld/appendix/)
+   1. **[`Load Balancers`](./system-design/hld/appendix/1-load-balancer.md)**
+      1. [`Terminologies`](./system-design/hld/appendix/1-load-balancer.md#terminologies)
+      2. [`How Load Balancer Words`](./system-design/hld/appendix/1-load-balancer.md#how-load-balancers-works)
+      3. [`Uses`](./system-design/hld/appendix/1-load-balancer.md#uses-of-load-balancer)
+      4. [`Load Balancing Algorithms`](./system-design/hld/appendix/1-load-balancer.md#load-balancing-algorithms)
+         1. [`Round Robin`](./system-design/hld/appendix/1-load-balancer.md#round-robin---the-simplest)
+         2. [`Least Connections`](./system-design/hld/appendix/1-load-balancer.md#least-connections)
+         3. [`Weighted Round Robins`](./system-design/hld/appendix/1-load-balancer.md#weighted-round-robin)
+         4. [`Weighted least Connections`](./system-design/hld/appendix/1-load-balancer.md#weighted-least-connections)
+         5. [`IP hasing`](./system-design/hld/appendix/1-load-balancer.md#ip-hashing)
+         6. [`Least Response Time`](./system-design/hld/appendix/1-load-balancer.md#least-response-time)
+         7. [`Custom Load`](./system-design/hld/appendix/1-load-balancer.md#custom-load)
+         8. [`Random`](./system-design/hld/appendix/1-load-balancer.md#random)
+         9. [`Least Bandwidth`](./system-design/hld/appendix/1-load-balancer.md#least-bandwidth)
 <br/>
 
 ## [`Low Level Design`](./system-design/lld/)
