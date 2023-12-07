@@ -1,61 +1,87 @@
 # Index 
 0. [`Agile Story Splitting Workflow`](./agile/Story-Splitting-Flowchart.pdf)
    
-# Microservices
-1. [`Microservices Index`](./microservices/index.md)
-      1. [`Categories of Microservices Patterns`](./microservices/index.md#category-0f-microservices-patterns)
-      2. [`Mind Map`](./microservices/index.md#mind-map-microservice-patterns)
-      3. [`Data Management Patterns`](./microservices/index.md#data-management-patterns)
-      4. [`Design & Implementation Patterns`](./microservices/index.md#design--implementation-pattern)
-      5. [`Messaging Patterns`](./microservices/index.md#messaging-patterns)
-      6. [`Catalog of microservices Patterns`](./microservices/index.md#catalog-0f-microservices-patterns)
+# [`System Design`](./system-design/)
+## [`Microservices`](./system-design/microservices/)
+1. **[`Microservices Index`](./system-design/microservices/index.md)**
+      1. [`Categories of Microservices Patterns`](./system-design/microservices/index.md#category-0f-microservices-patterns)
+      2. [`Mind Map`](./system-design/microservices/index.md#mind-map-microservice-patterns)
+      3. [`Data Management Patterns`](./system-design/microservices/index.md#data-management-patterns)
+      4. [`Design & Implementation Patterns`](./system-design/microservices/index.md#design--implementation-pattern)
+      5. [`Messaging Patterns`](./system-design/microservices/index.md#messaging-patterns)
+      6. [`Catalog of microservices Patterns`](./system-design/microservices/index.md#catalog-0f-microservices-patterns)
 <br/>
 
-1. [`Mind Mapping Microservices Patterns Part 1`](./microservices/0-microservices-concerns-pt1.md)
-   1. [`How to decompose the application into microservices`](./microservices/0-microservices-concerns-pt1.md#how-to-decompose-the-application-into-microservices)
-   2. [`Decomposition Design Pattern`](./microservices/0-microservices-concerns-pt1.md#decomposition-design-pattern)
-   3. [`Database Architecture`](./microservices/0-microservices-concerns-pt1.md#database-architecture)
-   4. [`Data Consistency Pattern`](./microservices/0-microservices-concerns-pt1.md#data-consistency-pattern)
-   5. [`Data Querying Pattern`](./microservices/0-microservices-concerns-pt1.md#data-querying-patterns)
-   6. [`Service Deployments`](./microservices/0-microservices-concerns-pt1.md#service-deployment)
-   7. [`Accessing API Clients`](./microservices/0-microservices-concerns-pt1.md#accessing-api-clients)
-   8. [`Microservices Communication`](./microservices/0-microservices-concerns-pt1.md#how-services-communicate-with-each-other)
+1. **[`Mind Mapping Microservices Patterns Part 1`](./system-design/microservices/0-microservices-concerns-pt1.md)**
+   1. [`How to decompose the application into microservices`](./system-design/microservices/0-microservices-concerns-pt1.md#how-to-decompose-the-application-into-microservices)
+   2. [`Decomposition Design Pattern`](./system-design/microservices/0-microservices-concerns-pt1.md#decomposition-design-pattern)
+   3. [`Database Architecture`](./system-design/microservices/0-microservices-concerns-pt1.md#database-architecture)
+   4. [`Data Consistency Pattern`](./system-design/microservices/0-microservices-concerns-pt1.md#data-consistency-pattern)
+   5. [`Data Querying Pattern`](./system-design/microservices/0-microservices-concerns-pt1.md#data-querying-patterns)
+   6. [`Service Deployments`](./system-design/microservices/0-microservices-concerns-pt1.md#service-deployment)
+   7. [`Accessing API Clients`](./system-design/microservices/0-microservices-concerns-pt1.md#accessing-api-clients)
+   8. [`Microservices Communication`](./system-design/microservices/0-microservices-concerns-pt1.md#how-services-communicate-with-each-other)
 <br/>
 
-1. [`Mind Mapping Microservices Pattern Part 2`](./microservices/0-microservices-concerns-pt2.md)
-   1. [`Non Functional Requirements`](./microservices/0-microservices-concerns-pt2.md#what-is-happening-within-services)
-   2. [`Are service behaving well`](./microservices/0-microservices-concerns-pt2.md#are-services-behaving-well)
-   3. [`Resilience`](./microservices/0-microservices-concerns-pt2.md#how-to-make-services-more-resilient)
+1. **[`Mind Mapping Microservices Pattern Part 2`](./system-design/microservices/0-microservices-concerns-pt2.md)**
+   1. [`Non Functional Requirements`](./system-design/microservices/0-microservices-concerns-pt2.md#what-is-happening-within-services)
+   2. [`Are service behaving well`](./system-design/microservices/0-microservices-concerns-pt2.md#are-services-behaving-well)
+   3. [`Resilience`](./system-design/microservices/0-microservices-concerns-pt2.md#how-to-make-services-more-resilient)
 <br/>
 
-1. [`Orchestration vs Choreography`](./microservices/0-orchestration-vs-choreography.md)
-   1. [`Orchestration`](./microservices/0-orchestration-vs-choreography.md#orchestration)
-   2. [`Choreography`](./microservices/0-orchestration-vs-choreography.md#choreography)
+1. **[`Orchestration vs Choreography`](./system-design/microservices/0-orchestration-vs-choreography.md)**
+   1. [`Orchestration`](./system-design/microservices/0-orchestration-vs-choreography.md#orchestration)
+   2. [`Choreography`](./system-design/microservices/0-orchestration-vs-choreography.md#choreography)
 <br/>
  
-1. [`Strangler Fig Pattern`](./microservices/1-strangler-fig-pattern.md)
+1. **[`Strangler Fig Pattern`](./system-design/microservices/1-strangler-fig-pattern.md)**
+<br/>
 
-# design
-[`High Scalability(Learn System Design)`](http://highscalability.com/)
-[`Designing Data Intensive Application Book`](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
+## [`SOLID`](./system-design/solid/)
+1. [`Single Responsibility`](./system-design/solid/index.md#s-single-responsibility-principle)
+2. [`Open Closed Principle`](./system-design/solid/index.md#o-open-closed-principle)
+3. [`Liskov Substitution`](./system-design/solid/index.md#l-liskov-substitution-principle)
+   1. [`LSP In Depth`](./system-design/solid/LSP.md)
+4. [`Interface Segregation`](./system-design/solid/index.md#i-interface-segregation-principle)
+5. [`Dependency Inversion`](./system-design/solid/index.md#d---dependency-inversion-principle)
+6. [`Dependency Injection vs Inversion of Control`](./system-design/solid/di-ioc-di.md)
+7. [`Documentation`](./system-design/solid/SOLID.docx)
+<br/>
 
-# High Level System Design
-1. [Appendix](./high-level-design/appendix/)
-   1. [`Load Balancers`](./high-level-design/appendix/1-load-balancer.md)
-      1. [Terminologies](./high-level-design/appendix/1-load-balancer.md#terminologies)
+## [`High Level System Design`](./system-design/hld/)
+0. [`General Tips`](./system-design/hld/0_general_tips.md)
+1. [`Appendix`](./high-level-design/appendix/)
+   1. **[`Load Balancers`](./high-level-design/appendix/1-load-balancer.md)**
+      1. [`Terminologies`](./high-level-design/appendix/1-load-balancer.md#terminologies)
       2. [`How Load Balancer Words`](./high-level-design/appendix/1-load-balancer.md#how-load-balancers-works)
       3. [`Uses`](./high-level-design/appendix/1-load-balancer.md#uses-of-load-balancer)
       4. [`Load Balancing Algorithms`](./high-level-design/appendix/1-load-balancer.md#load-balancing-algorithms)
          1. [`Round Robin`](./high-level-design/appendix/1-load-balancer.md#round-robin---the-simplest)
          2. [`Least Connections`](./high-level-design/appendix/1-load-balancer.md#least-connections)
          3. [`Weighted Round Robins`](./high-level-design/appendix/1-load-balancer.md#weighted-round-robin)
-         4. [`Weighted least Connections](./high-level-design/appendix/1-load-balancer.md#weighted-least-connections)
+         4. [`Weighted least Connections`](./high-level-design/appendix/1-load-balancer.md#weighted-least-connections)
          5. [`IP hasing`](./high-level-design/appendix/1-load-balancer.md#ip-hashing)
          6. [`Least Response Time`](./high-level-design/appendix/1-load-balancer.md#least-response-time)
          7. [`Custom Load`](./high-level-design/appendix/1-load-balancer.md#custom-load)
          8. [`Random`](./high-level-design/appendix/1-load-balancer.md#random)
          9. [`Least Bandwidth`](./high-level-design/appendix/1-load-balancer.md#least-bandwidth)
-# LINKS 
+<br/>
+
+## [`Low Level Design`](./system-design/lld/)
+1. [`Appendix`](./system-design/lld/)
+   1. [`Object Oriented Basic`](./system-design/lld/1-OO-basics.md)
+   2. [`Object Oriented Design & Analysis`](./system-design/lld/2-OO-design-and-analysis.md)
+   3. [`UML`](./system-design/lld/3-UML.md)
+   4. [`Use Case Diagram`](./system-design/lld/4-use-case-diagram.md)
+   5. [`Class Diagram`](./system-design/lld/5-class-diagram.md)
+   6. [`Sequence Diagram`](./system-design/lld/6-sequence-diagram.md)
+   7. [`Activity Diagram`](./system-design/lld/7-activity-diagrams.md)
+2. **[`Hotel Management System Design`](./system-design/lld/hotel-management/index.md)**
+<br/>
+
+## `Useful System Design Links`
+[`High Scalability(Learn System Design)`](http://highscalability.com/)
+[`Designing Data Intensive Application Book`](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
 [``OOD``](https://akshay-iyangar.github.io/system-design/)
 [``SD``](https://github.com/Jeevan-kumar-Raj/Grokking-System-Design)
 
