@@ -1,4 +1,5 @@
-﻿using GraphQLDemo.API.Schema;
+﻿using GraphQLDemo.API.Schema.Mutations;
+using GraphQLDemo.API.Schema.Queries;
 
 namespace GraphQLDemo.API
 {
@@ -14,7 +15,8 @@ namespace GraphQLDemo.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGraphQLServer()
-                .AddQueryType<Query>();
+                .AddQueryType<Query>()
+                .AddMutationType<Mutation>();
             services.AddControllers();
         }
 
