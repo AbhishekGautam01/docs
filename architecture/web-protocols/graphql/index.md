@@ -2,6 +2,8 @@
 * A query language to construct & retrieve data from APIs
 * Invented by Facebook in 2012 and open sourced in 2015.
 * Language and platform independent. Works with any language which supports json. 
+* It serves from just a single endpoint which makes it easier for clients as they need to know about just a single endpoint.
+
 
 ## GQL vs REST
 * graphQL has solved the data fetching problems like **over fetching & under fetching**.

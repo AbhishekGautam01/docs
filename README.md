@@ -78,6 +78,9 @@
       4. [`gRPC`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#grpc)
       5. [`Comparing Web APIs`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#comparing-web-apis)
       6. [`Flow Chart`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#comparing-web-apis)
+## [`GraphQL`](./architecture/web-protocols/graphql/index.md)
+   1. **[`Index`](./architecture/web-protocols/graphql/index.md)**
+   2. **[`Source Code`]()**
 # [`System Design`](./system-design/)
 ## [`Microservices`](./system-design/microservices/)
 1. **[`Microservices Index`](./system-design/microservices/index.md)**
