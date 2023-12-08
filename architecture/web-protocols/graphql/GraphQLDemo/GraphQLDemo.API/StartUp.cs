@@ -1,4 +1,6 @@
-﻿namespace GraphQLDemo.API
+﻿using GraphQLDemo.API.Schema;
+
+namespace GraphQLDemo.API
 {
     public class Startup
     {
@@ -11,7 +13,8 @@
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGraphQLServer();
+            services.AddGraphQLServer()
+                .AddQueryType<Query>();
             services.AddControllers();
         }
 
