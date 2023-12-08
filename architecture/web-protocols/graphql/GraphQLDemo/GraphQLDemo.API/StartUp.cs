@@ -11,6 +11,7 @@
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddGraphQLServer();
             services.AddControllers();
         }
 
@@ -20,7 +21,7 @@
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapGraphQL();
             });
         }
     }
