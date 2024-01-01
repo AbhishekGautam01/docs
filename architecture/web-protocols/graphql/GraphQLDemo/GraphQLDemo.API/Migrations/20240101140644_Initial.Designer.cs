@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GraphQLDemo.API.Migrations
 {
     [DbContext(typeof(SchoolDbContext))]
-    [Migration("20240101085254_Initial")]
+    [Migration("20240101140644_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
