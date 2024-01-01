@@ -3,6 +3,7 @@ using GraphQLDemo.API.Schema.Queries;
 using GraphQLDemo.API.Schema.Subscriptions;
 using GraphQLDemo.API.Services.Courses;
 using GraphQLDemo.API.Services.Instructor;
+using GraphQLDemo.API.Services.Student;
 using HotChocolate.Subscriptions;
 
 namespace GraphQLDemo.API.Schema.Mutations
@@ -12,10 +13,12 @@ namespace GraphQLDemo.API.Schema.Mutations
     {
         private readonly CoursesRepository _coursesRepository;
         private readonly InstructorRepository _instructorRepository;
-        public Mutation(CoursesRepository coursesRepository, InstructorRepository instructorRepository)
+        private readonly StudentRepository _studentRepository;
+        public Mutation(CoursesRepository coursesRepository, InstructorRepository instructorRepository, StudentRepository studentRepository)
         {
             _coursesRepository = coursesRepository;
             _instructorRepository = instructorRepository;
+            _studentRepository = studentRepository;
         }
 
         /*
@@ -192,6 +195,85 @@ namespace GraphQLDemo.API.Schema.Mutations
         public async Task<bool> DeleteCourse(Guid id)
         {
             return await _coursesRepository.Delete(id);
+        }
+
+        /*
+         mutation{
+          createStudent(studentInput: {
+            firstName: "GUGA",
+            lastName: "Ethan",
+            gpa : 10
+          }){
+            id
+            firstName
+            lastName
+            gpa
+          }
+        }
+         */
+        public async Task<StudentResult> CreateStudent(StudentInputType studentInput)
+        {
+            StudentDTO student = new StudentDTO()
+            {
+                Id = Guid.NewGuid(),
+                FirstName = studentInput.FirstName,
+                LastName = studentInput.LastName,
+                GPA = studentInput.GPA,
+            };
+
+            student = await _studentRepository.Create(student);
+
+            return new StudentResult()
+            {
+                Id = student.Id,
+                FirstName = studentInput.FirstName,
+                LastName = studentInput.LastName,
+                GPA = studentInput.GPA,
+            };
+        }
+
+        /*
+         mutation{
+          updateStudent(id: "aa79050c-7720-4b16-969e-a54c769709bf", studentInput: {
+            firstName: "Chelbowski",
+            lastName: "Ethan",
+            gpa : 10
+          }){
+            id
+            firstName
+            lastName
+            gpa
+          }
+        }
+         */
+        public async Task<StudentResult> UpdateStudent(Guid id, StudentInputType studentInput)
+        {
+            StudentDTO student = new StudentDTO()
+            {
+                Id = id,
+                FirstName = studentInput.FirstName,
+                LastName = studentInput.LastName,
+                GPA = studentInput.GPA,
+            };
+
+            student = await _studentRepository.Update(student);
+
+            return new StudentResult()
+            {
+                Id = student.Id,
+                FirstName = studentInput.FirstName,
+                LastName = studentInput.LastName,
+                GPA = studentInput.GPA,
+            };
+        }
+
+        /*
+         mutation{
+          deleteStudent(id: "9a421be1-9113-4756-b183-c14535e8b8c8")
+        }*/
+        public async Task<bool> DeleteStudent(Guid id)
+        {
+            return await _studentRepository.Delete(id);
         }
     }
     #endregion

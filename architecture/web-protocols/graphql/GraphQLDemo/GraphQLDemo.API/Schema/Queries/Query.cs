@@ -1,6 +1,7 @@
 ﻿using GraphQLDemo.API.Model;
 using GraphQLDemo.API.Services.Courses;
 using GraphQLDemo.API.Services.Instructor;
+using GraphQLDemo.API.Services.Student;
 
 namespace GraphQLDemo.API.Schema.Queries
 {
@@ -9,11 +10,13 @@ namespace GraphQLDemo.API.Schema.Queries
     {
         private readonly InstructorRepository _instructorRepository;
         private readonly CoursesRepository _courseRepository;
+        private readonly StudentRepository _studentRepository;
 
-        public Query(InstructorRepository instructorRepository, CoursesRepository courseRepository)
+        public Query(InstructorRepository instructorRepository, CoursesRepository courseRepository, StudentRepository studentRepository)
         {
             _instructorRepository = instructorRepository;
             _courseRepository = courseRepository;
+            _studentRepository = studentRepository;
         }
 
         /*
@@ -158,6 +161,51 @@ namespace GraphQLDemo.API.Schema.Queries
                     Salary = course.Instructor.Salary
                 },
                 Subject = course.Subject,
+            };
+        }
+
+        /*
+         query{
+          students{
+            id
+            firstName
+            lastName
+            gql
+          }
+        }
+         */
+        public async Task<IEnumerable<StudentType>> GetStudents()
+        {
+            var students = _studentRepository.Get();
+
+            return students.Select(s => new StudentType
+            {
+                Id = s.Id,
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                GPA = s.GPA
+            });
+        }
+
+        /*
+         query{
+          studentsById(id: "aa79050c-7720-4b16-969e-a54c769709bf"){
+            id
+            firstName
+            lastName
+            gql
+          }
+        }
+         */
+        public async Task<StudentType> GetStudentsById(Guid id)
+        {
+            var student = await _studentRepository.GetByIdAsync(id);
+            return new StudentType
+            {
+                Id = student.Id,
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                GPA = student.GPA
             };
         }
     }

@@ -1,9 +1,11 @@
-﻿using GraphQLDemo.API.Schema.Mutations;
+﻿using GraphQLDemo.API.DTOs;
+using GraphQLDemo.API.Schema.Mutations;
 using GraphQLDemo.API.Schema.Queries;
 using GraphQLDemo.API.Schema.Subscriptions;
 using GraphQLDemo.API.Services;
 using GraphQLDemo.API.Services.Courses;
 using GraphQLDemo.API.Services.Instructor;
+using GraphQLDemo.API.Services.Student;
 using Microsoft.EntityFrameworkCore;
 
 namespace GraphQLDemo.API
@@ -24,6 +26,7 @@ namespace GraphQLDemo.API
 
             services.AddScoped<CoursesRepository>();
             services.AddScoped<InstructorRepository>();
+            services.AddScoped<StudentRepository>();
 
             services.AddGraphQLServer()
                 .AddInMemorySubscriptions() // This is in-memory but in a more distributed system we need to use redis to store our subscriptions.
