@@ -12,6 +12,25 @@ namespace GraphQLDemo.API.Services.Instructor
             _dbContextFactory = dbContextFactory;
         }
 
+        public IEnumerable<InstructorDTO> Get()
+        {
+            using(var context = _dbContextFactory.CreateDbContext())
+            {
+                return context.Instructors
+                    .Include(i => i.Courses)
+                    .ToList();
+            }
+        }
+
+        public async Task<InstructorDTO> GetByIdAsync(Guid id)
+        {
+            using (var context = _dbContextFactory.CreateDbContext())
+            {
+                return await context.Instructors.Include(i => i.Courses).FirstOrDefaultAsync(i => i.Id == id);
+            }
+
+        }
+
         public async Task<InstructorDTO> Create(InstructorDTO instructor)
         {
             using(var context = _dbContextFactory.CreateDbContext())

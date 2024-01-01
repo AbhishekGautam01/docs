@@ -7,6 +7,6 @@
         public string LastName { get; set; }
         public double GPA { get; set; }
 
-        public IEnumerable<CourseDTO> Courses { get; set; }
+        public virtual IEnumerable<CourseDTO> Courses { get; set; }
     }
 }
