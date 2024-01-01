@@ -1,10 +1,13 @@
 ﻿using GraphQLDemo.API.Schema.Queries;
+using GraphQLDemo.API.Schema.Subscriptions;
+using HotChocolate.Subscriptions;
 
 namespace GraphQLDemo.API.Schema.Mutations
 {
     public class Mutation
     {
         private readonly List<CourseResult> _courses;
+
         public Mutation()
         {
             _courses = new List<CourseResult>();
@@ -22,7 +25,8 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
-        public CourseResult CreateCourse(CourseInputType courseInput)
+        // Directly injecting the ITopicSender Dependency to mutation method using the ITopicEventSender.
+        public async Task<CourseResult> CreateCourse(CourseInputType courseInput, [Service] ITopicEventSender topicEventSender)
         {
             CourseResult course = new CourseResult()
             {
@@ -35,6 +39,8 @@ namespace GraphQLDemo.API.Schema.Mutations
                 }
             };
             _courses.Add(course);
+            // Topic Name is method name however we can give custom name for this using [Topic] Attribute.
+            await topicEventSender.SendAsync(nameof(Subscription.CourseCreated), course);
             return course;
         }
 
@@ -68,7 +74,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           ]
         }
          */
-        public CourseResult UpdateCourse(Guid id, CourseInputType courseInput)
+        public async Task<CourseResult> UpdateCourse(Guid id, CourseInputType courseInput, [Service] ITopicEventSender topicEventSender)
         {
             var course = _courses.FirstOrDefault(x => x.Id == id);
             if(course == null)
@@ -83,6 +89,9 @@ namespace GraphQLDemo.API.Schema.Mutations
             {
                 Id = courseInput.InstructorId,
             };
+            // When listening for specific events we dont publish using the subscription name, we make the topic name as below
+            string updateCourseTopic = $"{course.Id}_{nameof(Subscription.CourseUpdate)}";
+            await topicEventSender.SendAsync(updateCourseTopic, course);
             return course;
         }
 

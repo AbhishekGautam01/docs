@@ -1,5 +1,6 @@
 ﻿using GraphQLDemo.API.Schema.Mutations;
 using GraphQLDemo.API.Schema.Queries;
+using GraphQLDemo.API.Schema.Subscriptions;
 
 namespace GraphQLDemo.API
 {
@@ -15,14 +16,20 @@ namespace GraphQLDemo.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGraphQLServer()
+                .AddInMemorySubscriptions() // This is in-memory but in a more distributed system we need to use redis to store our subscriptions.
                 .AddQueryType<Query>()
-                .AddMutationType<Mutation>();
+                .AddMutationType<Mutation>()
+                .AddSubscriptionType<Subscription>(); // this uses web sockets
+
             services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseRouting();
+
+            // For GQL Subscriptions
+            app.UseWebSockets();
 
             app.UseEndpoints(endpoints =>
             {
