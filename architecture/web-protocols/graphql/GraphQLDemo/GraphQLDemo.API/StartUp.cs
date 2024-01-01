@@ -2,6 +2,8 @@
 using GraphQLDemo.API.Schema.Queries;
 using GraphQLDemo.API.Schema.Subscriptions;
 using GraphQLDemo.API.Services;
+using GraphQLDemo.API.Services.Courses;
+using GraphQLDemo.API.Services.Instructor;
 using Microsoft.EntityFrameworkCore;
 
 namespace GraphQLDemo.API
@@ -18,7 +20,11 @@ namespace GraphQLDemo.API
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionString = configuration.GetConnectionString("default");
-            services.AddPooledDbContextFactory<SchoolDbContext>(o => o.UseSqlite(connectionString));
+            services.AddPooledDbContextFactory<SchoolDbContext>(o => o.UseSqlServer(connectionString));
+
+            services.AddScoped<CoursesRepository>();
+            services.AddScoped<InstructorRepository>();
+
             services.AddGraphQLServer()
                 .AddInMemorySubscriptions() // This is in-memory but in a more distributed system we need to use redis to store our subscriptions.
                 .AddQueryType<Query>()

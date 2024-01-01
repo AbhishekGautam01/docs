@@ -7,7 +7,6 @@ namespace GraphQLDemo.API.Schema.Mutations
         public Guid Id { get; set; }
         public string Name { get; set; }
         public Subject Subject { get; set; }
-
-        public InstructorType Instructor { get; set; }
+        public Guid InstructorId { get; set; }
     }
 }
