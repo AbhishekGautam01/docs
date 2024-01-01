@@ -11,18 +11,122 @@ namespace GraphQLDemo.API.Schema.Mutations
     public class Mutation
     {
         private readonly CoursesRepository _coursesRepository;
-        public Mutation(CoursesRepository coursesRepository)
+        private readonly InstructorRepository _instructorRepository;
+        public Mutation(CoursesRepository coursesRepository, InstructorRepository instructorRepository)
         {
             _coursesRepository = coursesRepository;
+            _instructorRepository = instructorRepository;
         }
 
+        /*
+         mutation{
+          createInstructor(instructor: {
+            firstName: "Singleton",
+            lastName: "Jean",
+            salary: 3333303,
+            subject: HISTORY
+          }){
+            id
+            firstName
+            lastName
+            salary
+          }
+        }
+         */
+        public async Task<InstructorResult> CreateInstructor(InstructorInputType instructor)
+        {
+            InstructorDTO instructorDTO = new InstructorDTO()
+            {
+                Id = Guid.NewGuid(),
+                FirstName = instructor.FirstName,
+                LastName = instructor.LastName,
+                Salary = instructor.Salary,
+            };
+
+            instructorDTO = await _instructorRepository.Create(instructorDTO);
+
+            InstructorResult instructorResult = new InstructorResult()
+            {
+                Id = instructorDTO.Id,
+                FirstName = instructorDTO.FirstName,
+                LastName = instructorDTO.LastName,
+                Salary = instructorDTO.Salary,
+                Courses = instructorDTO.Courses,
+            };
+
+            return instructorResult;
+        }
+
+        /*
+         mutation{
+          updateInstructor(id: "fe837c03-6bc9-4dcd-970e-e5f72e818c1c", instructor: {
+            firstName: "Singleton",
+            lastName: "Jr",
+            salary: 4333303,
+            subject: HISTORY
+          }){
+            id
+            firstName
+            lastName
+            salary
+          }
+        }
+         */
+        public async Task<InstructorResult> UpdateInstructor(Guid id, InstructorInputType instructor)
+        {
+            InstructorDTO instructorDTO = new InstructorDTO()
+            {
+                Id = id,
+                FirstName = instructor.FirstName,
+                LastName = instructor.LastName,
+                Salary = instructor.Salary,
+            };
+
+            instructorDTO = await _instructorRepository.Update(instructorDTO);
+
+            InstructorResult instructorResult = new InstructorResult()
+            {
+                Id = instructorDTO.Id,
+                FirstName = instructorDTO.FirstName,
+                LastName = instructorDTO.LastName,
+                Salary = instructorDTO.Salary,
+                Courses = instructorDTO.Courses,
+            };
+
+            return instructorResult;
+        }
+
+        /*
+        mutation{
+          deleteInstructor(id: "fe837c03-6bc9-4dcd-970e-e5f72e818c1c")
+        }
+        */
+        public async Task<bool> DeleteInstructor(Guid id)
+        {
+            return await _instructorRepository.Delete(id);
+        }
+
+        /*
+         mutation{
+          createCourse(courseInput: {
+            name: "Algo",
+            subject: MATHS,
+            instructorId: "bd759bea-b5a0-4fd2-b5f4-93a9c939d136"
+          }){
+            id
+            name
+            subject
+            instructorId
+          }
+        }
+         */
         public async Task<CourseResult> CreateCourse(CourseInputType courseInput, [Service] ITopicEventSender topicEventSender)
         {
             CourseDTO course = new CourseDTO()
             {
                 Id = Guid.NewGuid(),
                 Name = courseInput.Name,
-                Subject = (DTOs.Subject)courseInput.Subject,
+                Subject = courseInput.Subject,
                 InstructorId = courseInput.InstructorId,
             };
 
@@ -32,7 +136,7 @@ namespace GraphQLDemo.API.Schema.Mutations
             {
                 Id = course.Id,
                 Name = course.Name,
-                Subject = (Queries.Subject)course.Subject,
+                Subject = course.Subject,
                 InstructorId = course.InstructorId,
             };
 
@@ -40,13 +144,27 @@ namespace GraphQLDemo.API.Schema.Mutations
             return courseResult;
         }
 
+        /*
+         mutation{
+          updateCourse(id: "aaa46bd4-6678-4429-8105-99e3c58ff038", courseInput: {
+            name: "Algo-DSA",
+            subject: MATHS,
+            instructorId: "bd759bea-b5a0-4fd2-b5f4-93a9c939d136"
+          }){
+            id
+            name
+            subject
+            instructorId
+          }
+        }
+         */
         public async Task<CourseResult> UpdateCourse(Guid id, CourseInputType courseInput, [Service] ITopicEventSender topicEventSender)
         {
             CourseDTO course = new CourseDTO()
             {
                 Id = id,
                 Name = courseInput.Name,
-                Subject = (DTOs.Subject)courseInput.Subject,
+                Subject = courseInput.Subject,
                 InstructorId = courseInput.InstructorId,
             };
 
@@ -56,7 +174,7 @@ namespace GraphQLDemo.API.Schema.Mutations
             {
                 Id = course.Id,
                 Name = course.Name,
-                Subject = (Queries.Subject)course.Subject,
+                Subject = course.Subject,
                 InstructorId = course.InstructorId,
             };
 
@@ -66,13 +184,18 @@ namespace GraphQLDemo.API.Schema.Mutations
             return courseResult;
         }
 
+        /*
+         mutation{
+          deleteCourse(id: "aaa46bd4-6678-4429-8105-99e3c58ff038")
+        }
+         */
         public async Task<bool> DeleteCourse(Guid id)
         {
             return await _coursesRepository.Delete(id);
         }
     }
     #endregion
-    
+
     #region OLD SIMPLER MUTATION EXAMPLES
     //public class Mutation
     //{

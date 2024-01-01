@@ -1,12 +1,13 @@
-﻿namespace GraphQLDemo.API.Schema.Queries
+﻿using GraphQLDemo.API.DTOs;
+
+namespace GraphQLDemo.API.Schema.Mutations
 {
-    public class InstructorType
+    public class InstructorResult
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public double Salary { get; set; }
-
-        public IEnumerable<CourseType> Courses { get; set; } = Enumerable.Empty<CourseType>();
+        public IEnumerable<CourseDTO> Courses { get; set; }
     }
 }
