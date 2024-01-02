@@ -1,4 +1,5 @@
-﻿using GraphQLDemo.API.Model;
+﻿using GraphQLDemo.API.DataLoaders;
+using GraphQLDemo.API.Model;
 using GraphQLDemo.API.Services.Instructor;
 
 namespace GraphQLDemo.API.Schema.Queries
@@ -12,9 +13,10 @@ namespace GraphQLDemo.API.Schema.Queries
 
         // Hot Chocolate injects the dependency here using [Service]
         [GraphQLNonNullType]
-        public async  Task<InstructorType> Instructor([Service] InstructorRepository instructorRepository)
+        public async  Task<InstructorType> Instructor([Service] InstructorDataLoader instructorDataLoader)
         {
-            var instructor = await instructorRepository.GetByIdAsync(InstructorId);
+            // When we hit the resolver N time the data loader will batch this resolver and run it just once to solve the N + 1 Problem. 
+            var instructor = await instructorDataLoader.LoadAsync(InstructorId, CancellationToken.None);
             return new InstructorType { Id = instructor.Id, FirstName = instructor.FirstName, LastName = instructor.LastName, Salary = instructor.Salary };
         }
         public IEnumerable<StudentType> Students { get; set; }

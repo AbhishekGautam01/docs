@@ -60,5 +60,8 @@ query {
 }   
 ```
 
-* **Creating Fragments**
-* 
+## N + 1 Problem
+* Data Loaders solve the N + 1 Problems.
+* The problem is lets say we load all courses in 1 query, now each course have 1 instructor so for N Courses we need to do N more queries to get the Instructors hence N + 1 queries are involved. 
+* What we want here is that we should do 1 Query to get all courses and 1 more to get all required instructors. 
+
