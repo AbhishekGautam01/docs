@@ -64,4 +64,5 @@ query {
 * Data Loaders solve the N + 1 Problems.
 * The problem is lets say we load all courses in 1 query, now each course have 1 instructor so for N Courses we need to do N more queries to get the Instructors hence N + 1 queries are involved. 
 * What we want here is that we should do 1 Query to get all courses and 1 more to get all required instructors. 
-
+* Data loaders can be useful when while returning the data we have data split across different APIs or data sources. 
+* Sometimes data loaders may be slower like the course and instructor example when we want to load just the course then we will have a better performance with data loader but when we want to fetch both then join would be better instead of running two queries. 

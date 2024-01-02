@@ -1,4 +1,5 @@
 ﻿using GraphQLDemo.API.Model;
+using GraphQLDemo.API.Services;
 using GraphQLDemo.API.Services.Courses;
 using GraphQLDemo.API.Services.Instructor;
 using GraphQLDemo.API.Services.Student;
@@ -94,20 +95,35 @@ namespace GraphQLDemo.API.Schema.Queries
         }
 
         /*
-         query{
-          courses{
-            id
-            name
-            subject
-            instructor{
-              id
-              firstName
-              lastName
-              salary
+        query{
+            courses(first: 3, after: "Mg=="){
+                edges{
+                    node{
+                        id
+                        name
+                        subject
+                        instructor{
+                            id
+                            firstName
+                            lastName
+                            salary
+                        }
+                    }
+                    cursor
+                }
+                pageInfo{
+                    endCursor
+                    hasNextPage
+                    hasPreviousPage
+                }
+                totalCount
             }
-          }
         }
          */
+        // This implements cursor based pagination. Also there is offset based pagination.
+        // By default if we use this pagination approach just using the attribute all the data would still be fetched. What we can do is pass IQueryable instead of IEnumerable and then hot chocolate will do all the work to perform pagination till database level. 
+        // But returning IQueryable is not a good idea and also as per our current implementation dbContext is disposed hence we can't return IQuerable.
+        //[UsePaging(IncludeTotalCount = true, DefaultPageSize = 10)]
         public async Task<IEnumerable<CourseType>> GetCourses()
         {
             var courses = await _courseRepository.Get();
@@ -137,6 +153,78 @@ namespace GraphQLDemo.API.Schema.Queries
                 Subject = course.Subject,
             };
             */
+        }
+
+        /*
+         query{
+            paginatedCourses(first: 3){
+                edges{
+                    node{
+                    id
+                    name
+                    subject
+                    instructor{
+                        id
+                        firstName
+                        lastName
+                        salary
+                    }
+                    }
+                }
+                pageInfo{
+                    hasNextPage
+                    hasPreviousPage
+                }
+                totalCount
+            }
+        }*/
+        [UseDbContext(typeof(SchoolDbContext))]
+        [UsePaging(IncludeTotalCount = true, DefaultPageSize = 10)]
+        public async Task<IQueryable<CourseType>> GetPaginatedCourses([ScopedService] SchoolDbContext schoolDbContext)
+        {
+            return schoolDbContext.Courses.Select(x => new CourseType
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Subject = x.Subject,
+                InstructorId = x.InstructorId
+            });
+        }
+
+        /*
+         query{
+        offSetCourses(skip: 3, take: 3){
+            items{
+                id
+                name
+                subject
+                instructor{
+                    id
+                    firstName
+                    lastName
+                    salary
+                }
+            }
+            pageInfo{
+                hasNextPage
+                hasPreviousPage
+            }
+            totalCount
+        }
+    }
+         */
+        [UseOffsetPaging(IncludeTotalCount = true, DefaultPageSize = 10)]
+        public async Task<IEnumerable<CourseType>> GetOffSetCourses()
+        {
+            var courses = await _courseRepository.Get();
+
+            return courses.Select(x => new CourseType
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Subject = x.Subject,
+                InstructorId = x.InstructorId
+            });
         }
 
         /*
