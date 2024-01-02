@@ -35,7 +35,8 @@ namespace GraphQLDemo.API
                 .AddInMemorySubscriptions() // This is in-memory but in a more distributed system we need to use redis to store our subscriptions.
                 .AddQueryType<Query>()
                 .AddMutationType<Mutation>()
-                .AddSubscriptionType<Subscription>(); // this uses web sockets
+                .AddSubscriptionType<Subscription>() // this uses web sockets
+                .AddFiltering(); 
 
             services.AddControllers();
         }
