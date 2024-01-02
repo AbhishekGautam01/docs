@@ -1,10 +1,13 @@
-﻿using GraphQLDemo.API.DTOs;
+﻿using FirebaseAdminAuthentication.DependencyInjection.Models;
+using GraphQLDemo.API.DTOs;
 using GraphQLDemo.API.Schema.Queries;
 using GraphQLDemo.API.Schema.Subscriptions;
 using GraphQLDemo.API.Services.Courses;
 using GraphQLDemo.API.Services.Instructor;
 using GraphQLDemo.API.Services.Student;
+using HotChocolate.Authorization;
 using HotChocolate.Subscriptions;
+using System.Security.Claims;
 
 namespace GraphQLDemo.API.Schema.Mutations
 {
@@ -36,6 +39,8 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
+        // Import from Hot Chocolate
+        [Authorize]
         public async Task<InstructorResult> CreateInstructor(InstructorInputType instructor, [Service] ITopicEventSender topicEventSender)
         {
             InstructorDTO instructorDTO = new InstructorDTO()
@@ -75,7 +80,9 @@ namespace GraphQLDemo.API.Schema.Mutations
             salary
           }
         }
+        [Authorize]
          */
+        [Authorize]
         public async Task<InstructorResult> UpdateInstructor(Guid id, InstructorInputType instructor, [Service] ITopicEventSender topicEventSender)
         {
             InstructorDTO instructorDTO = new InstructorDTO()
@@ -108,6 +115,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           deleteInstructor(id: "fe837c03-6bc9-4dcd-970e-e5f72e818c1c")
         }
         */
+        [Authorize]
         public async Task<bool> DeleteInstructor(Guid id)
         {
             return await _instructorRepository.Delete(id);
@@ -127,8 +135,10 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
-        public async Task<CourseResult> CreateCourse(CourseInputType courseInput, [Service] ITopicEventSender topicEventSender)
+        [Authorize]
+        public async Task<CourseResult> CreateCourse(CourseInputType courseInput, [Service] ITopicEventSender topicEventSender, ClaimsPrincipal claimsPrincipal)
         {
+            string firebaseUserId = claimsPrincipal.FindFirstValue(FirebaseUserClaimType.ID);
             CourseDTO course = new CourseDTO()
             {
                 Id = Guid.NewGuid(),
@@ -165,6 +175,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
+        [Authorize]
         public async Task<CourseResult> UpdateCourse(Guid id, CourseInputType courseInput, [Service] ITopicEventSender topicEventSender)
         {
             CourseDTO course = new CourseDTO()
@@ -196,6 +207,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           deleteCourse(id: "aaa46bd4-6678-4429-8105-99e3c58ff038")
         }
          */
+        [Authorize]
         public async Task<bool> DeleteCourse(Guid id)
         {
             return await _coursesRepository.Delete(id);
@@ -215,6 +227,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
+        [Authorize]
         public async Task<StudentResult> CreateStudent(StudentInputType studentInput, [Service] ITopicEventSender topicEventSender)
         {
             StudentDTO student = new StudentDTO()
@@ -255,6 +268,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
+        [Authorize]
         public async Task<StudentResult> UpdateStudent(Guid id, StudentInputType studentInput, [Service] ITopicEventSender topicEventSender)
         {
             StudentDTO student = new StudentDTO()
@@ -284,6 +298,7 @@ namespace GraphQLDemo.API.Schema.Mutations
          mutation{
           deleteStudent(id: "9a421be1-9113-4756-b183-c14535e8b8c8")
         }*/
+        [Authorize]
         public async Task<bool> DeleteStudent(Guid id)
         {
             return await _studentRepository.Delete(id);

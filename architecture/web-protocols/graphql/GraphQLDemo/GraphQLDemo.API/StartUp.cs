@@ -1,4 +1,6 @@
-﻿using GraphQLDemo.API.DataLoaders;
+﻿using FirebaseAdmin;
+using FirebaseAdminAuthentication.DependencyInjection.Extensions;
+using GraphQLDemo.API.DataLoaders;
 using GraphQLDemo.API.DTOs;
 using GraphQLDemo.API.Schema.Mutations;
 using GraphQLDemo.API.Schema.Queries;
@@ -38,7 +40,11 @@ namespace GraphQLDemo.API
                 .AddSubscriptionType<Subscription>() // this uses web sockets
                 .AddFiltering()
                 .AddSorting()
-                .AddProjections(); 
+                .AddProjections()
+                .AddAuthorization();
+
+            services.AddSingleton(FirebaseApp.Create());
+            services.AddFirebaseAuthentication();
 
             services.AddControllers();
         }
@@ -46,6 +52,8 @@ namespace GraphQLDemo.API
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseRouting();
+
+            app.UseAuthentication();
 
             // For GQL Subscriptions
             app.UseWebSockets();
