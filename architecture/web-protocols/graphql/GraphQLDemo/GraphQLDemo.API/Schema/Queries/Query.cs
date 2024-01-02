@@ -1,5 +1,6 @@
 ﻿using GraphQLDemo.API.Model;
 using GraphQLDemo.API.Schema.Filters;
+using GraphQLDemo.API.Schema.Sorting;
 using GraphQLDemo.API.Services;
 using GraphQLDemo.API.Services.Courses;
 using GraphQLDemo.API.Services.Instructor;
@@ -157,7 +158,7 @@ namespace GraphQLDemo.API.Schema.Queries
         }
 
         /*
-         query{
+        query{
             paginatedCourses(first: 3, where: {
                 or: [
                     {
@@ -171,7 +172,9 @@ namespace GraphQLDemo.API.Schema.Queries
                         }
                     }
                 ]
-        
+            },
+            order: {
+                name: ASC
             }){
                 edges{
                     node{
@@ -192,13 +195,13 @@ namespace GraphQLDemo.API.Schema.Queries
                 }
                 totalCount
             }
-        }
         }*/
         //Order of attributes matter here.
         [UseDbContext(typeof(SchoolDbContext))]
         [UsePaging(IncludeTotalCount = true, DefaultPageSize = 10)]
         // Here filtering is being applied to database level due to exposing the IQueryable.
         [UseFiltering(typeof(CourseFilterType))]
+        [UseSorting(typeof(CourseSortType))]
         public async Task<IQueryable<CourseType>> GetPaginatedCourses([ScopedService] SchoolDbContext schoolDbContext)
         {
             return schoolDbContext.Courses.Select(x => new CourseType
