@@ -36,7 +36,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
-        public async Task<InstructorResult> CreateInstructor(InstructorInputType instructor)
+        public async Task<InstructorResult> CreateInstructor(InstructorInputType instructor, [Service] ITopicEventSender topicEventSender)
         {
             InstructorDTO instructorDTO = new InstructorDTO()
             {
@@ -57,6 +57,7 @@ namespace GraphQLDemo.API.Schema.Mutations
                 Courses = instructorDTO.Courses,
             };
 
+            await topicEventSender.SendAsync(nameof(Subscription.InstructorCreated), instructorResult);
             return instructorResult;
         }
 
@@ -75,7 +76,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
-        public async Task<InstructorResult> UpdateInstructor(Guid id, InstructorInputType instructor)
+        public async Task<InstructorResult> UpdateInstructor(Guid id, InstructorInputType instructor, [Service] ITopicEventSender topicEventSender)
         {
             InstructorDTO instructorDTO = new InstructorDTO()
             {
@@ -95,6 +96,9 @@ namespace GraphQLDemo.API.Schema.Mutations
                 Salary = instructorDTO.Salary,
                 Courses = instructorDTO.Courses,
             };
+
+            var topicName = $"{instructorResult.Id}_{nameof(Subscription.InstructorUpdate)}";
+            await topicEventSender.SendAsync(topicName, instructorResult);
 
             return instructorResult;
         }
@@ -211,7 +215,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
-        public async Task<StudentResult> CreateStudent(StudentInputType studentInput)
+        public async Task<StudentResult> CreateStudent(StudentInputType studentInput, [Service] ITopicEventSender topicEventSender)
         {
             StudentDTO student = new StudentDTO()
             {
@@ -223,13 +227,18 @@ namespace GraphQLDemo.API.Schema.Mutations
 
             student = await _studentRepository.Create(student);
 
-            return new StudentResult()
+
+            var studentResult = new StudentResult()
             {
                 Id = student.Id,
                 FirstName = studentInput.FirstName,
                 LastName = studentInput.LastName,
                 GPA = studentInput.GPA,
             };
+
+            var topicName = $"{nameof(Subscription.StudentCreated)}";
+            await topicEventSender.SendAsync(topicName, studentResult);
+            return studentResult;
         }
 
         /*
@@ -246,7 +255,7 @@ namespace GraphQLDemo.API.Schema.Mutations
           }
         }
          */
-        public async Task<StudentResult> UpdateStudent(Guid id, StudentInputType studentInput)
+        public async Task<StudentResult> UpdateStudent(Guid id, StudentInputType studentInput, [Service] ITopicEventSender topicEventSender)
         {
             StudentDTO student = new StudentDTO()
             {
@@ -258,13 +267,17 @@ namespace GraphQLDemo.API.Schema.Mutations
 
             student = await _studentRepository.Update(student);
 
-            return new StudentResult()
+            var studentResult = new StudentResult()
             {
                 Id = student.Id,
                 FirstName = studentInput.FirstName,
                 LastName = studentInput.LastName,
                 GPA = studentInput.GPA,
             };
+
+            var topicName = $"{studentResult.Id}_{nameof(Subscription.StudentUpdate)}";
+            await topicEventSender.SendAsync(topicName , studentResult);
+            return studentResult;
         }
 
         /*

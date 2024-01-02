@@ -1,4 +1,5 @@
 ﻿using GraphQLDemo.API.Schema.Mutations;
+using GraphQLDemo.API.Schema.Queries;
 using HotChocolate.Execution;
 using HotChocolate.Subscriptions;
 
@@ -32,6 +33,58 @@ namespace GraphQLDemo.API.Schema.Subscriptions
         {
             string topicName = $"{courseId}_{nameof(Subscription.CourseUpdate)}";
             var subscriptionStream = topicEventReceiver.SubscribeAsync<CourseResult>(topicName);
+            return subscriptionStream;
+        }
+
+        /*
+         subscription{
+            instructorCreated{
+                id
+                firstName
+                lastName
+                salary
+            }
+            }
+         */
+        [Subscribe]
+        public InstructorResult InstructorCreated([EventMessage] InstructorResult instructor) => instructor;
+
+        /*
+         subscription{
+            instructorUpdate(instructorId: "f38f474b-627c-4ce6-b86c-62f34a0045a5"){
+                id
+                firstName
+                lastName
+                salary
+            }
+            }
+         */
+        [SubscribeAndResolve]
+        public ValueTask<ISourceStream<InstructorResult>> InstructorUpdate(Guid instructorId, [Service] ITopicEventReceiver topicEventReceiver)
+        {
+            string topicName = $"{instructorId}_{nameof(Subscription.InstructorUpdate)}";
+            var subscriptionStream = topicEventReceiver.SubscribeAsync<InstructorResult>(topicName);
+            return subscriptionStream;
+        }
+
+        /*
+         subscription{
+            studentCreated{
+                id
+                firstName
+                lastName
+                gpa
+            }
+        }
+         */
+        [Subscribe]
+        public StudentResult StudentCreated([EventMessage] StudentResult student) => student;
+
+        [SubscribeAndResolve]
+        public ValueTask<ISourceStream<StudentResult>> StudentUpdate(Guid studentId, [Service] ITopicEventReceiver topicEventReceiver)
+        {
+            var topicName = $"{studentId}_{nameof(Subscription.StudentUpdate)}";
+            var subscriptionStream = topicEventReceiver.SubscribeAsync<StudentResult>(topicName);
             return subscriptionStream;
         }
     }

@@ -49,10 +49,6 @@ namespace GraphQLDemo.API.Schema.Queries
                     Subject = x.Subject,
                     Id = x.Id,
                     Name = x.Name,
-                    Instructor = new InstructorType
-                    {
-                        FirstName = i.FirstName,
-                    }
                 })
             });
 
@@ -116,19 +112,31 @@ namespace GraphQLDemo.API.Schema.Queries
         {
             var courses = await _courseRepository.Get();
 
-            return courses.Select(c => new CourseType
+            return courses.Select(x => new CourseType
             {
-                Id = c.Id,
-                Name = c.Name,
-                Instructor = new InstructorType
-                {
-                    Id = c.Instructor.Id,
-                    FirstName = c.Instructor.FirstName,
-                    LastName = c.Instructor.LastName,
-                    Salary = c.Instructor.Salary
-                },
-                Subject = c.Subject,
+                Id = x.Id,
+                Name = x.Name,
+                Subject = x.Subject,
+                InstructorId = x.InstructorId
             });
+
+            // In Below code the Instructor is being fetch and mapped even when it is not requested for. This means the joins while performing the data fetch on courses is getting wasted. 
+            // To Solve this problem we can write a resolver for Instructor to fetch the data only when it is being requested for and not everytime while making the query. 
+            /*
+            return new CourseType
+            {
+                Id = course.Id,
+                Name = course.Name,
+                Instructor = new InstructorType()
+                {
+                    Id = course.Instructor.Id,
+                    FirstName = course.Instructor.FirstName,
+                    LastName = course.Instructor.LastName,
+                    Salary = course.Instructor.Salary
+                },
+                Subject = course.Subject,
+            };
+            */
         }
 
         /*
@@ -153,6 +161,17 @@ namespace GraphQLDemo.API.Schema.Queries
             {
                 Id = course.Id,
                 Name = course.Name,
+                Subject = course.Subject,
+                InstructorId = course.InstructorId
+            };
+
+            // In Below code the Instructor is being fetch and mapped even when it is not requested for. This means the joins while performing the data fetch on courses is getting wasted. 
+            // To Solve this problem we can write a resolver for Instructor to fetch the data only when it is being requested for and not everytime while making the query. 
+            /*
+            return new CourseType
+            {
+                Id = course.Id,
+                Name = course.Name,
                 Instructor = new InstructorType()
                 {
                     Id = course.Instructor.Id,
@@ -162,6 +181,7 @@ namespace GraphQLDemo.API.Schema.Queries
                 },
                 Subject = course.Subject,
             };
+            */
         }
 
         /*
