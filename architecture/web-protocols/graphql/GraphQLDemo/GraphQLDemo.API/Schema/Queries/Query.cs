@@ -199,6 +199,7 @@ namespace GraphQLDemo.API.Schema.Queries
         //Order of attributes matter here.
         [UseDbContext(typeof(SchoolDbContext))]
         [UsePaging(IncludeTotalCount = true, DefaultPageSize = 10)]
+        [UseProjection]
         // Here filtering is being applied to database level due to exposing the IQueryable.
         [UseFiltering(typeof(CourseFilterType))]
         [UseSorting(typeof(CourseSortType))]

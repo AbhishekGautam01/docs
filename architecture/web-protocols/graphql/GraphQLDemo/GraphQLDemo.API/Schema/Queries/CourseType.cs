@@ -9,6 +9,7 @@ namespace GraphQLDemo.API.Schema.Queries
         public Guid Id { get; set; }
         public string Name { get; set; }
         public Subject Subject { get; set; }
+        [IsProjected(true)]
         public Guid InstructorId { get; set; }
 
         // Hot Chocolate injects the dependency here using [Service]

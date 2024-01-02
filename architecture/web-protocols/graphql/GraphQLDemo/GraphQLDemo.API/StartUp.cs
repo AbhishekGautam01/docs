@@ -37,7 +37,8 @@ namespace GraphQLDemo.API
                 .AddMutationType<Mutation>()
                 .AddSubscriptionType<Subscription>() // this uses web sockets
                 .AddFiltering()
-                .AddSorting(); 
+                .AddSorting()
+                .AddProjections(); 
 
             services.AddControllers();
         }
