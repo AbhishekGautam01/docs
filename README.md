@@ -7,12 +7,14 @@
    4. [`Cosmos DB`](./README.md#cosmos-db)
 3. [`Architecture`](./README.md#architecture)
    1. [`Web Service Protocols`](./README.md#web-protocols)
-4. [`System Design`](./README.md#system-design)
+4. [`Programming Langauges`](./README.md#programming-languages)
+   1. [`C#`](./README.md#c--net)
+5. [`System Design`](./README.md#system-design)
    1. [`Microservices`](./README.md#microservices)
    2. [`SOLID`](./README.md#solid)
    3. [`High Level Design`](./README.md#high-level-system-design)
    4. [`Low Level Design`](./README.md#low-level-design)
-5. [`Testing`](./README.md#testing)
+6. [`Testing`](./README.md#testing)
    1. [`Postman API Automation Testing`](./README.md#postman-api-automation-testing)
 <br/>
 
@@ -81,6 +83,15 @@
 ## [`GraphQL`](./architecture/web-protocols/graphql/index.md)
    1. **[`Index`](./architecture/web-protocols/graphql/index.md)**
    2. **[`Source Code`]()**
+
+<br/>
+
+# [`Programming Languages`](./programming/)
+## [`C# & .NET`](./programming/csharp-net/)
+   1. [`Ques`](./programming/csharp-net/ques/)
+      1. [`30 Basics Questions`](./programming/csharp-net/ques/30-imp.md)
+      2. [`Delegates & events`](./programming/csharp-net/ques/delegates-events.md)
+
 # [`System Design`](./system-design/)
 ## [`Microservices`](./system-design/microservices/)
 1. **[`Microservices Index`](./system-design/microservices/index.md)**
