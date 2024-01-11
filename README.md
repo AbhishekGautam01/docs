@@ -80,10 +80,11 @@
       4. [`gRPC`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#grpc)
       5. [`Comparing Web APIs`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#comparing-web-apis)
       6. [`Flow Chart`](./architecture/web-protocols/rest-vs-gql-vs-grpc.md#comparing-web-apis)
+<br/>
+
 ## [`GraphQL`](./architecture/web-protocols/graphql/index.md)
    1. **[`Index`](./architecture/web-protocols/graphql/index.md)**
-   2. **[`Source Code`]()**
-
+   2. **[`Source Code`](./architecture/web-protocols/graphql/GraphQLDemo/)**
 <br/>
 
 # [`Programming Languages`](./programming/)
@@ -91,6 +92,8 @@
    1. [`Ques`](./programming/csharp-net/ques/)
       1. [`30 Basics Questions`](./programming/csharp-net/ques/30-imp.md)
       2. [`Delegates & events`](./programming/csharp-net/ques/delegates-events.md)
+      3. [`Garbage Collector`](./programming/csharp-net/ques/gc.md)
+<br/>
 
 # [`System Design`](./system-design/)
 ## [`Microservices`](./system-design/microservices/)
