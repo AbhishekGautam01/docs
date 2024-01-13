@@ -100,6 +100,8 @@
       8. [`Constructor`](./programming/cs/ques/constructor.md)
       9. [`Abstract Class & Interfaces`](./programming/cs/ques/abstract-interfaces.md)
       10. [`OOPS`](./programming/cs/ques/oops.md)
+      11. [`LINQ`](./programming/cs/ques/linq.md)
+      12. [`EF Core`](./programming/cs/ques/ef-core.md)
 <br/>
 
 # [`System Design`](./system-design/)
