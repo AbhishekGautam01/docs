@@ -94,6 +94,12 @@
       2. [`Delegates & events`](./programming/cs/ques/delegates-events.md)
       3. [`Garbage Collector`](./programming/cs/ques/gc.md)
       4. [`Aggregation, Composition & Association`](./programming/cs/ques/aggregation.md)
+      5. [` Stack, Heap, Boxing, Unboxing, Value types, Reference types`](./programming/cs/ques/stack-heaps.md)
+      6. [`SOLID & DI`](./programming/cs/ques/solid-di.md)
+      7. [`Classes`](./programming/cs/ques/classes.md)
+      8. [`Constructor`](./programming/cs/ques/constructor.md)
+      9. [`Abstract Class & Interfaces`](./programming/cs/ques/abstract-interfaces.md)
+      10. [`OOPS`](./programming/cs/ques/oops.md)
 <br/>
 
 # [`System Design`](./system-design/)

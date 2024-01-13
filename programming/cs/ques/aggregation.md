@@ -26,4 +26,12 @@
 <br/>
 
 * **Explain Association?**
-  * 
+  * There is a link between objects.
+  * Composition and aggregation are subset of Association. 
+  * When we are not clear if it composition and aggregation then devs may call it association.
+<br/>
+
+* **UML symbols for composition, aggregation and association?**
+  * Association: Simple Arrow
+  * Aggregation: Empty Diamond
+  * Composition: Filled Diamond
