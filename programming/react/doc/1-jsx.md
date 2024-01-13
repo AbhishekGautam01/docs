@@ -1,5 +1,5 @@
 # JSX
-
+## [Cheat Sheet JSX](https://jsx-notes.vercel.app/)
 * index.js
 ```js
 // 1) Import React & React DOM Lib
@@ -43,3 +43,48 @@ root.render(<App />); // Passing App as JSX element.
   * Declaring variables
   * Code to compute values we want to show in our JSX
   * Content we want this component to show by returning JSX
+
+## Props
+
+* To our elements we can pass **props**. Below type, min, max are props short for properties.
+```js
+  return (<input type="number" min={5} max={5}/>);
+```
+* Props are different from html attributes. Props can refer to a variable using the same curly braces syntax.
+  * Props which are strings should always be written in ""
+  * Numbers in propers should always be written in {}
+  * Array should be passed as {[1,2,3]}
+  * Object:{{color: 'red}} -> out {} is JSX and inner {} is object properties.
+  * Objects can be passed as props
+```js
+function App() {
+    const inputType = 'number';
+    const minValue = 5;
+    const maxValue = 10;
+  return (<input type={inputType} min={minValue} max={maxValue} style={{border: '3px solid red'}}/>);
+}
+```
+
+## Converting HTML to JSX
+* We should be able to use html attributes with some changes in JSX
+* All Prop names follow camelCase
+* Number attributes use curly braces
+* Boolean 'true' can be written with just the property name. 'False' Should be written with the curly braces.
+>  <input spellCheck> == spellCheck=true;
+> <input spellCheck={false}>
+* The `class` attribute is written as 'className'. class help with styling.
+* In-line styles are provided as objects.
+```js
+  return (<textarea autoFocus={false} style={{textDecoration: 'none', padding: '5px'}}/>);
+```
+
+## Extracting Components
+* App.js file will have code to create the components. 
+* Index.js will only Show the App component.
+
+## Create a new Components
+* Create a new file. By covention file should start with a caps letter
+* Make your component. Should be a function tht returns JSX
+* Export the components at bottom of file
+* Import the component into another file. 
+* Render the component
