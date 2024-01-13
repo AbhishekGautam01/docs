@@ -88,11 +88,12 @@
 <br/>
 
 # [`Programming Languages`](./programming/)
-## [`C# & .NET`](./programming/csharp-net/)
-   1. [`Ques`](./programming/csharp-net/ques/)
-      1. [`30 Basics Questions`](./programming/csharp-net/ques/30-imp.md)
-      2. [`Delegates & events`](./programming/csharp-net/ques/delegates-events.md)
-      3. [`Garbage Collector`](./programming/csharp-net/ques/gc.md)
+## [`C# & .NET`](./programming/cs/)
+   1. [`Ques`](./programming/cs/ques/)
+      1. [`30 Basics Questions`](./programming/cs/ques/30-imp.md)
+      2. [`Delegates & events`](./programming/cs/ques/delegates-events.md)
+      3. [`Garbage Collector`](./programming/cs/ques/gc.md)
+      4. [`Aggregation, Composition & Association`](./programming/cs/ques/aggregation.md)
 <br/>
 
 # [`System Design`](./system-design/)
