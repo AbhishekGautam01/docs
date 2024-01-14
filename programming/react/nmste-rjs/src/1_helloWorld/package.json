@@ -1,0 +1,29 @@
+{
+  "name": "1_helloworld",
+  "version": "1.0.0",
+  "description": "Hello World React App",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhishekGautam01/docs.git"
+  },
+  "keywords": [
+    "react",
+    "namaste-hello-world"
+  ],
+  "author": "AbhishekGautam",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

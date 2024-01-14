@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
 
 // 1) Creating a h1 tag by using core React APIs
 const heading = React.createElement(
