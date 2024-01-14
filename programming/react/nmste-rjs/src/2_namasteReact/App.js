@@ -9,7 +9,7 @@ const jsxHeading = <h1 id="heading">Namaste React 🔥</h1>;
 //React Functional Component
 const Title = function () {
   return (<div id="container" className="head">
-    <h1>Namaste React Functional Component🔥</h1>
+    <h1>Title: Namaste React Functional Component🔥</h1>
   </div>)
 };
 
