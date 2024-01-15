@@ -1,2 +1,1 @@
-import { UserIcon} from './UserIcon.jsx'
-export default UserIcon
+export {default} from './UserIcon'

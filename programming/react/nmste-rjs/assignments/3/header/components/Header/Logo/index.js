@@ -1,3 +1,1 @@
-import {Logo} from './Logo.jsx'
-
-export default Logo;
+export { default } from './Logo.jsx'

@@ -1,2 +1,1 @@
-import {SearchBar} from './SearchBar.jsx'
-export default SearchBar
+export {default} from './SearchBar'

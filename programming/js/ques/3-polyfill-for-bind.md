@@ -23,11 +23,11 @@ printMyName(); // Abhishek Gautam
 // If we call this function the method should be executed
 // ..args will be array of args passed.
 Function.prototype.mybind = function(...args) {
-    let obj = this; // point to instance on which myBind will be called.
+    let func = this; // point to instance on which myBind will be called.
     params = args.slice(1); //Remove first arg and return rest
     return function(...args2) {
         //[...arr1, ...arr2] - Array concatenation method
-        obj.apply(args[0], [...params, ...args2]); // apply method as param is an array and array cannot be passed as 2nd arg in bind.
+        func.apply(args[0], [...params, ...args2]); // apply method as param is an array and array cannot be passed as 2nd arg in bind.
     }
 }
 
@@ -36,5 +36,4 @@ let printMyName1 = printName.myBind(name);
 printMyName1(); // Abhishek Gautam
 
 ```
-
-
+* **Question**

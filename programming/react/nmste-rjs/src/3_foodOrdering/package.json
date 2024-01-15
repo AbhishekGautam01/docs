@@ -1,0 +1,34 @@
+{
+  "name": "3_foodOrdering",
+  "version": "1.0.0",
+  "description": "Namaster Food Ordering Project",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhishekGautam01/docs.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "AbhishekGautam01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhishekGautam01/docs/issues"
+  },
+  "homepage": "https://github.com/AbhishekGautam01/docs#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

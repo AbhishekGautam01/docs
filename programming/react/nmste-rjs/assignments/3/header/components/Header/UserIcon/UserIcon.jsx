@@ -1,13 +1,12 @@
 import React from 'react';
-import styles from './UserIcon.module.css';
-import userIcon from '../../../public/userIcon.png';
 
-const UserIcon = () => {
-    return (
+import userIcon from '../../../public/userIcon.png';
+import styles from './UserIcon.module.css';
+
+const UserIcon = () => (
         <div className={styles.userIcon}>
             <img src={userIcon} alt='UserIcon' />
         </div>
-    )
-}
+)
 
-export {UserIcon}
+export default UserIcon;
