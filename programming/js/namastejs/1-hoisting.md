@@ -1,5 +1,6 @@
 # Hoisting
 
+* the process whereby the interpreter appears to move the declaration of functions, variables, classes, or imports to the top of their scope, prior to execution of the code.
 * We are trying to access x and getName even before they are declared or initialized but it will work in JS.
 * 
 ```js
