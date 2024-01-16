@@ -60,5 +60,21 @@ const RestaurantCard = ({resName, cuisine}) => {
 }
 ```
 
+* [].join(', ') ; to join array elements with ,
+
+* To display a list of elements on Ui based on a data list. 
+* We can use for loop or better way is using map. Each child in list should have a unique `key` property. 
+* This `key` is required 
+* React itself says never use index as keys if the order of objects may change
+* Not using Keys (not acceptable) <<<<<<<< Using index as keys <<<<<<<< Unique Ids as Keys(Best practice)
+```js
+  {
+resList.map((restaurant, index) => <RestaurantCard resData={restaurant} />)
+  }
+
+```
+![keys](./img/keys.png)
+
 ## Config driven UI
 * When website is driven by data and config, backend APIs returns the data and config to control the UI elements. 
+* Cloudinary -CDN
