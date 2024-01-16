@@ -1,28 +1,22 @@
 .searchContainer {
-    display: flex;
-    align-items: center;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding: 8px;
-    width: 100%; /* Set the container to 100% width */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .searchContainer input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 8px;
-    font-size: 16px;
-    width: 70%; /* Set the input to 70% width */
-    margin: 0 auto; /* Center-align the input within the container */
-  }
-  
-  .searchContainer input::placeholder {
-    color: #888;
-  }
-  
-  .searchContainer input:focus {
-    border: 1px solid #3498db; /* Change the border color on focus */
-  }
+  display: flex;
+  align-items: center;
+  background-color: #fff; /* Set the background color */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  padding: 5px 10px; /* Add padding for better spacing */
+}
+
+.searchContainer input {
+  width: 100px;
+  border: none; /* Remove the input border */
+  outline: none; /* Remove the input outline */
+  flex: 1; /* Allow the input to take up remaining space in the container */
+  padding: 5px; /* Add padding to the input */
+  margin-left: 10px; /* Add space between the input and the container edge */
+}
+
+/* Optional: Add styles for the placeholder text */
+.searchContainer input::placeholder {
+  color: #999; /* Set the color of the placeholder text */
+}
