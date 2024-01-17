@@ -263,3 +263,61 @@
   * Avoid N+1 Query problem by using Include
   * Use Connection resilience and retry policies
   * database connection pooling
+
+
+## Setting up concurrency in ef core
+* Concurrency conflicts occur when one user retrieves an entity's data to modify it and then another user updates the same entity data before the first user's changes are written to database. We can handle it. 
+* **Last In Wins**
+  * In some cases there is 1 version of truth so it doesn't matter if user overwrite changes. 
+  * Eg 2 users attempting to update final score. 
+  * There is no need for any concurrency management strategy here. 
+* **Pessimistic Concurrency**
+  * It involves locking database records to prevent other users from being able to access/change them until the lock is released. 
+  * However not all dbs supports this functionality to lock records. 
+  * This add complexity and make program resource intensive. 
+  * EF provides no support for pessimistic concurrency control. 
+  * It is not possible in disconnected scenarios such as web apps. 
+* **Optimistic Concurrency**
+  * For concurrency conflict detection we can follow one of 2 approaches
+    * **Configuring existing properties as concurrency token**
+      * This can be done by adding `[ConcurrencyCheck]` attribute to specific properties or using `IsConcurrencyToken()` in model builder.
+      ```csharp
+      public class Author
+      {
+          public int AuthorId { get; set; }
+          [ConcurrencyCheck]
+          public string LastName { get; set; }
+          public ICollection<Book> Books { get; set; }
+      }
+
+      protected override void OnModelCreating(ModelBuilder modelBuilder)
+      {
+          modelBuilder.Entity<Author>()
+              .Property(a => a.LastName).IsConcurrencyToken();
+      } 
+      ```
+      * Any properties added as concurrency token will be added in where clause of `update` or `delete` statements. 
+      * When SQL command is executed, EF Core would expect one row that matches original value. 
+      * If values were changed in between and no row found then `DbUpdateConcurrencyException` comes.
+      * This property can be applied to as many non primary keys as needed.
+    * **Adding a rowVersion property to act as concurrency token**
+      * different db offers different type for this column, `rowVersion` data type for this purpose. 
+      * This column stores an incrementing version. 
+      * This property must be `byte[]` in model and can be annotated by `[TimeStamp]`
+      ```csharp
+      public class Author
+      {
+          public int AuthorId { get; set; }
+          public string FirstName { get; set; }
+          public string LastName { get; set; }
+          public ICollection<Book> Books { get; set; }
+          [TimeStamp]
+          public byte[] RowVersion { get; set; }
+      }
+
+      protected override void OnModelCreating(ModelBuilder modelBuilder)
+      {
+          modelBuilder.Entity<Author>()
+              .Property(a => a.RowVersion).IsRowVersion();
+      } 
+      ```

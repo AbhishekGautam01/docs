@@ -16,6 +16,13 @@
   * In Visual Studio also we can track these performance counter by going to Build menu.
 <br/>
 
+* **How to tune garbage collector?**
+  * We can set:
+    * maximum size of heap
+    * size of individual generations
+    * frequency of garbage collection
+<br/>
+
 * **Does GC collector clean primitive data types?**
   * NO as they are allocated on stack and stack removes them as soon as the variable goes out of scope.
   * GC Heap Size is also a measure how much the GC is running.

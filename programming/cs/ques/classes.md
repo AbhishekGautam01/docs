@@ -53,3 +53,6 @@
   * In RAPID App dev tools where there is lot of code generations happening, like in WPF apps, etc. 
   * To organize complex code in to different physical files. Like core logic in one class , validations in another.
 <br/>
+
+* **Creating an Immutable class**
+  * So properties should not change once created this is simple, by creating properties as readonly and have a parameterized constructor to initialize it. 
