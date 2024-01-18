@@ -24,3 +24,38 @@
 * No Centralized or special machine to do heavy lifting . 
 * All decision making responsibilities are split amongst involved machines. which could take role or client or server. 
 * Example: Block chain
+
+## Characteristics of distributed System
+1. **Scalability**
+   1. Horizontal
+   2. Vertical
+2. **Availability**
+   1. Availability through redundancy and replication
+   2. Availability through Load Balancing
+   3. Availability through Distributed Data Storage
+   4. Availability and Consistency Models(Strong, Weak, Eventual)
+   5. Availability through Health monitoring and alerts
+   6. Availability through Regular System Maintenance and Updates
+   7. Availability through Geographic Distribution
+3. **Latency and Performance**
+   1. Data Locality
+   2. Load Balancing
+   3. Caching Strategies
+4. **Concurrency and Coordination**
+   1. Concurrency Control
+   2. Synchronization 
+5. **Monitoring and Observability**
+   1. Metrics Collections
+   2. Distributed Tracing
+   3. Logging
+   4. Alert and Anomaly Detection
+   5. Visualization and Dashboards
+6. **Resilience and Error Handling**
+   1. Fault Tolerance
+   2. Graceful Degradation
+   3. Retry and Backoff strategies 
+   4. Error Handling and Reporting
+   5. Chaos Engineering
+7. **Fault Tolerance vs High Availability**
+   1. Fault Tolerance 
+   2. High Availability

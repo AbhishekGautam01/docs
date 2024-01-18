@@ -21,9 +21,11 @@
 <br/>
 
 * **useState**: It add state to functional components. it returns an array with two elements. the current state and a function that lets you update it.
+* React can't track local js variable, react can monitor the change of state variables, react will re-render the header component. 
   * state is a piece of data which a react component manages. 
   * **The useState hook allows to have a state in Functional Component**
     * **State in Functional Component**: useState allows functional components to have their own state.
     * **Multiple state variables**: We can use the useState hook multiple times in a component to manage different pieces of state independently. 
     * **Automatic State Merging**: `setCount(prevCount => prevCount + 1)`
     * It allows us to update state based on previous state as well. 
+* **Const [btnNameReact, setBtnNameReact] = useState()** - This const varirable is able to change because when the btnNameReact changes is requesting and re rendering of containing component is started but this time this varirable is not set to initial value but it will set it to updated value

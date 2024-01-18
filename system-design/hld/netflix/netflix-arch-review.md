@@ -1,24 +1,24 @@
 # A Design Analysis of Cloud-based Microservices Architecture at Netflix
 * Due to an outage in 2008 for 3 days, Netflix made 2 important decision to avoid single point of failures: 
     * Migrating the IT Infra to public cloud 
-    * replacing monolith programs with small managable software components by microservice architecture.
+    * replacing monolith programs with small manageable software components by microservice architecture.
 
-* Moving to AWS helped netflix becuase now **Netflix did not do the undifferentiated heavy lifting work of building data centers but focusing more on core business of providing high quality video streaming user experience.** 
+* Moving to AWS helped netflix because now **Netflix did not do the undifferentiated heavy lifting work of building data centers but focusing more on core business of providing high quality video streaming user experience.** 
 <br/>
 
-* Microservices encourages **seperation of concerns** and promotes **modularity with data encapsulation** 
-* it also promotes **horizontal scalaing** and **workload partitioning** and **faster deployments**
+* Microservices encourages **separation of concerns** and promotes **modularity with data encapsulation** 
+* it also promotes **horizontal scaling** and **workload partitioning** and **faster deployments**
 * it can help **track performance of each service** and isolate its issue from other running services. 
 
 #### Some Important System Considerations 
-* Availibility 
+* Availability 
 * Latency( how long it takes for packets to reach their destination.)
 * Scalability 
 * Throughput( the number of packets that are processed within a specific period of time)
-* Resilence to network failures or system outages. 
+* Resilience to network failures or system outages. 
 
 ## Architecture 
-* Netflix uses **AWS and [OpenConnect](https://openconnect.netflix.com/en_gb/)**(purpose-built Content Delivery Network (CDN) responsible for serving 100% of thier video traffic.)
+* Netflix uses **AWS and [OpenConnect](https://openconnect.netflix.com/en_gb/)**(purpose-built Content Delivery Network (CDN) responsible for serving 100% of their video traffic.)
 <br/>
 
 * Netflix 3 Main components: 
@@ -29,7 +29,7 @@
 
 * **CLIENT** 
     * Any supported browsers on a laptop or desktop or a Netflix app on smart phone or smart TVs. 
-    * Netflix has it's own Andriod and iOS apps
+    * Netflix has it's own Android and iOS apps
 <br/>
 
 * **BACKEND** 
@@ -44,17 +44,17 @@
         * Video processing and transcoding (purpose-built tools by Netflix)
 <br/>
 
-* **OPENCONNECT CDN** 
-    * It is a network of servers called Open Connect Appliances (OCAs) oprimized for storing and streaming large videos. 
+* **OPEN CONNECT CDN** 
+    * It is a network of servers called Open Connect Appliances (OCAs) optimized for storing and streaming large videos. 
     * These OCAs are placed inside Internet Service Providers (ISPs) amd Internet Exchange Locations(IXPs) network around the world 
-    * OCAs are reponsible for streaming videos directly to the clients. 
+    * OCAs are responsible for streaming videos directly to the clients. 
 
 ### Playback Architecture 
 * On Press of play button, Client talks to Both Backend on AWS and OCAs on netflix CDN to stream videos. 
 ![PlaybackArchitecture](./img/0_s6VqGsfmWUGlG8vD.jpg)
 <br/>
 
-1. OCAs constantly send health reports about thier workload status, routability and available videos to Cache Control Service running in AWS EC2 in order for Playback Apps to update the latest healthy OCAs to clients. 
+1. OCAs constantly send health reports about their workload status, routability and available videos to Cache Control Service running in AWS EC2 in order for Playback Apps to update the latest healthy OCAs to clients. 
 2. A Play request is sent from the client device to Netflix's Playback Apps service running on AWS EC2 to get URLs for streaming videos. 
 3. Playbacks apps service must determine that Play request would be valid in order to view the particular video. Such validations would check subscriber's plan, licensing of video in different countries, etc. 
 4. Playback Apps service talks to steering service also running in AWS EC2 to get the list of appropriate OCAs servers of the requested video. Steering service uses the client’s IP address and ISPs information to identify a set of suitable OCAs work best for that client.
@@ -63,14 +63,14 @@
 <br/>
 
 ## Backend Architecture
-* Backend handles most of things like Sign up, login, billing to more complex task such as video transcoding and personilized recommendations. 
+* Backend handles most of things like Sign up, login, billing to more complex task such as video transcoding and personalized recommendations. 
 ![ReferenceBackendArchitecture](./img/1_0MHo_ywcTvh1IVjf1h9ezA.jpeg)
 
 1. The Client sends a Play request to Backend running on AWS. That request is handled by AWS Load balancer (ELB)
 2. AWS ELB will forward that request to API Gateway Service(**ZUUL**) running on AWS EC2 instances. ZUUL is used to allow **dynamic routing, traffic monitoring and security, resilience to failure** at edge of the cloud deployment. 
-Then request is forwarded to Application API for further processesing. 
+Then request is forwarded to Application API for further processing. 
 3. Application API component is core business logic behind Netflix operations. 
-4. Play API will call a microservice to fullfill the request. 
+4. Play API will call a microservice to fulfill the request. 
 5. Microservices are **mostly stateless small programs and can call each others**. 
 > **NOTE** - To control its cascading failure and enable resilience, each microservice is isolated from the caller process by **[Hystrix](https://github.com/Netflix/hystrix)**(Used to handle fault tolerance)
 6. Microservices save or get data from data store. 
