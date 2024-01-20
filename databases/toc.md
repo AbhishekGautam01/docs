@@ -42,14 +42,14 @@
 
 # Cosmos DB
 
-1. **[`Walkthrough`](../cosmos-db/1-walkthrough.md)**
-   1. [`Categories of NoSQL Databases`](../cosmos-db/1-walkthrough.md#categories-of-nosql-databases)
-   2. [`CosmosDb Features`](../cosmos-db/1-walkthrough.md#azure-cosmos-db-features)
-   3. [`Multi API & Multi Model`](../cosmos-db/1-walkthrough.md#multi-model--multi-apis)
-   4. [`5 Well Defined Consistency Levels`](../cosmos-db/1-walkthrough.md#5-well-defined-consistency-levels)
-   5. [`Resource Hierarchy`](../cosmos-db/1-walkthrough.md#resource-hierarchy)
+1. **[`Walkthrough`](./cosmos-db/1-walkthrough.md)**
+   1. [`Categories of NoSQL Databases`](./cosmos-db/1-walkthrough.md#categories-of-nosql-databases)
+   2. [`CosmosDb Features`](./cosmos-db/1-walkthrough.md#azure-cosmos-db-features)
+   3. [`Multi API & Multi Model`](./cosmos-db/1-walkthrough.md#multi-model--multi-apis)
+   4. [`5 Well Defined Consistency Levels`](./cosmos-db/1-walkthrough.md#5-well-defined-consistency-levels)
+   5. [`Resource Hierarchy`](./cosmos-db/1-walkthrough.md#resource-hierarchy)
    6. [`RUs`](../cosmos-db/1-walkthrough.md#request-unitsrus)
-   7. [`Database Partitioning`](../cosmos-db/1-walkthrough.md#database-partitioning)
-2. **[`Database Setup`](../cosmos-db/2-SetUp.md)**
-3. **[`Schema Design Strategies`](../cosmos-db/3-Schema_Design-Strategies.md)**
-4. **[`Real World Data Modeling Example`](../cosmos-db/4-real-world-example.md)**
+   7. [`Database Partitioning`](./cosmos-db/1-walkthrough.md#database-partitioning)
+2. **[`Database Setup`](./cosmos-db/2-SetUp.md)**
+3. **[`Schema Design Strategies`](./cosmos-db/3-Schema_Design-Strategies.md)**
+4. **[`Real World Data Modeling Example`](./cosmos-db/4-real-world-example.md)**
