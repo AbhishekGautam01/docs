@@ -15,6 +15,7 @@
 # [`Angular`](./angular/)
 1. [`Cheat Sheet`](./angular/cheat-sheet.md)
 2. [`RxJS Observable & Subjects`](./angular/rxjs.md)
+3. [`Making HTTP Calls in Angular`](./angular/http-calls.md)
 
 # [`C# & .NET`](./cs/)
 
