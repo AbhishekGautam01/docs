@@ -40,7 +40,7 @@
 1. [`Create Operations`](./mongo-db/6-create-operations.md)
 2. [`Read Operations`](./mongo-db/7-read-operations.md)
 
-# Cosmos DB
+# [`Cosmos DB`](./cosmos-db/)
 
 1. **[`Walkthrough`](../cosmos-db/1-walkthrough.md)**
    1. [`Categories of NoSQL Databases`](../cosmos-db/1-walkthrough.md#categories-of-nosql-databases)

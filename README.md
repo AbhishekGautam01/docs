@@ -9,6 +9,7 @@
 
 # Agile
 1. [`Agile Story Splitting Workflow`](./agile/Story-Splitting-Flowchart.pdf)
+2. [`12 Agile Manifesto`](./agile/agile-manifesto.md)
 
 
 # [`Architecture`](./architecture/)
