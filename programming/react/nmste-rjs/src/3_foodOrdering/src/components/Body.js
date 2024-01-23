@@ -37,25 +37,40 @@ const Body = () => {
   );
 
   const fetchData = async () => {
-    /** Fetch is given by browsers, it returns a promise. */
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5011314&lng=77.234377&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    const jsonData =
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
-    const projectedData = jsonData.map((item) => ({
-      id: item.info.id,
-      name: item.info.name,
-      cloudinaryImageId: item.info.cloudinaryImageId,
-      costForTwo: item.info.costForTwo,
-      cuisines: item.info.cuisines,
-      avgRating: item.info.avgRating,
-    }));
-
-    setRestaurants(projectedData);
-    setFilteredRestaurants(projectedData);
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5011314&lng=77.234377&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      // Check if the response status is okay (status code 200)
+      if (!data.ok) {
+        throw new Error(`Failed to fetch data. Status: ${data.status}`);
+      }
+  
+      const json = await data.json();
+      
+      // Check if the expected data structure is present in the JSON response
+      if (!json || !json.data || !json.data.cards[4] || !json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants) {
+        throw new Error('Unexpected data format in the response');
+      }
+  
+      const jsonData = json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
+      const projectedData = jsonData.map((item) => ({
+        id: item.info.id,
+        name: item.info.name,
+        cloudinaryImageId: item.info.cloudinaryImageId,
+        costForTwo: item.info.costForTwo,
+        cuisines: item.info.cuisines,
+        avgRating: item.info.avgRating,
+      }));
+  
+      setRestaurants(projectedData);
+      setFilteredRestaurants(projectedData);
+    } catch (error) {
+      console.error('Error fetching data:', error.message);
+      // You can also handle the error state here, e.g., set an error flag or show a user-friendly message.
+    }
   };
+  
 
   return (
     <div className="body">
