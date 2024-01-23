@@ -26,6 +26,7 @@
       * It will give us a state variable which is recieved within an array
       * Whenever state variable changes react is re-rendering he component . This change can happen from anywhere.
         * To modify state variable is done by a function
+        * Header will re render the entire component.
         * **We need an extra function to update state because it acts like a trigger to start the diff alogrithm which uses react fiber.**
         ```js
         <button className="filter-btn" onClick={() => {
