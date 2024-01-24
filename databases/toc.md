@@ -40,6 +40,7 @@
 
 1. [`Create Operations`](./mongo-db/6-create-operations.md)
 2. [`Read Operations`](./mongo-db/7-read-operations.md)
+3. [`Aggregation Pipeline`](./mongo-db/aggregation.md)
 
 # [`Cosmos DB`](./cosmos-db/)
 
