@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]); //Input Param is a state variable by react.
@@ -63,6 +64,7 @@ const Body = () => {
         avgRating: item.info.avgRating,
       }));
   
+      console.log(projectedData)
       setRestaurants(projectedData);
       setFilteredRestaurants(projectedData);
     } catch (error) {
@@ -97,7 +99,9 @@ const Body = () => {
       <div className="res-container">
         {filteredRestaurant.length > 0 ? (
           filteredRestaurant.map((restaurant) => (
-            <RestaurantCard key={restaurant.id} resDetail={restaurant} />
+            <Link to={"/restaurants/" + restaurant.id}>
+              <RestaurantCard key={restaurant.id} resDetail={restaurant} />
+            </Link>
           ))
         ) : (
           <Shimmer />
