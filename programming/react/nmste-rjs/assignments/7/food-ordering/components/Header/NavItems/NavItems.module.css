@@ -1,0 +1,25 @@
+.navitemsContainer{
+    display: flex;
+}
+
+.navitemsContainer ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+}
+
+.navitemsContainer li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navitemsContainer li:last-child {
+    margin-right: 0;
+}
+
+.icon {
+    font-size: 40px;
+}
