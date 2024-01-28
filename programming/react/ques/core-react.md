@@ -179,3 +179,141 @@
 * **What are fragments?**
   * Fragment lets us group a list of children without adding extra nodes to the DOM. 
   * Fragments are a bit faster and use less memory by not creating an extra DOM node.
+  * DOM inspector is less cluttered. 
+<br/>
+
+* **What are portals in React?**
+  * Recommended way to render children into a DOM node that exists outside the DOM hierarchy
+  * `ReactDOM.createPortal(child, container);`
+<br/>
+
+* **What are stateful components**
+  * If the behavior of a component is dependent on the state of the component then it can be termed as stateful component. 
+  * These stateful components are either function components with hooks or class components.
+<br/>
+
+* **What is the purpose of render method in `reactDOM?**
+  * Method is used to render a react element in the DOM. 
+  * `ReactDOM.render(element, container, [callback])`
+  * The callback is optional; it runs when every time components is rendered or update.
+<br/>
+
+* **How to use Styles in react?**
+  * This can be used by passing styles attribute. 
+  * CSS properties are passed in camelCased. 
+  ```js
+    const divStyle = {
+    color: "blue",
+    backgroundImage: "url(" + imgUrl + ")",
+  };
+
+  function HelloWorldComponent() {
+    return <div style={divStyle}>Hello World!</div>;
+  }
+  ```
+<br/>
+
+* **How events are different in React?**
+  * React event handlers are named using camelCase, rather than lowerCase
+  * With JSX you can pass a function as event handler rather than string.
+<br/>
+
+* **How do you conditionally render the components?**
+  * JSX can take conditions and it doesn't render if something evaluates to false or undefined.
+  * We can use `conditional short circuiting` i.e to display if something evaluates to true like :
+    ```js
+    const MyComponent = ({ name, address }) => (
+      <div>
+        <h2>{name}</h2>
+        {address && <p>{address}</p>}
+      </div>
+    );
+    ```
+  * If we want to use if else then we can use a ternary operator
+<br/>
+
+* **Why we need to be careful when spreading props on DOM elements?**
+  * When we spread props we run into the risk of adding unknown HTML attributes, which is a bad practice
+  * We should de structure the props like const comp = ({isDisplay, ...restOfProps}) => {}
+<br/>
+
+* **Explain me the usage of React.memo**
+  * It is a higher order component in react that is used to memoize a component and prevents unnecessary re renders. 
+  * When a component is wrapped with React.memo it will only re render if the passed props changes. 
+  ```js
+  import React from 'react';
+
+  const MyComponent = React.memo((props) => {
+    // Component logic and rendering based on props
+    return (
+      <div>
+        {props.name}
+      </div>
+    );
+  });
+
+  // Usage
+  const App = () => {
+    const data = { name: 'John' };
+
+    return <MyComponent data={data} />;
+  };  
+  ```
+<br/>
+
+* **What is switching Components**
+  * A component which can render more than 1 component on condition.
+    ```js
+    import HomePage from "./HomePage";
+    import AboutPage from "./AboutPage";
+    import ServicesPage from "./ServicesPage";
+    import ContactPage from "./ContactPage";
+
+    const PAGES = {
+      home: HomePage,
+      about: AboutPage,
+      services: ServicesPage,
+      contact: ContactPage,
+    };
+
+    const Page = (props) => {
+      const Handler = PAGES[props.page] || ContactPage;
+
+      return <Handler {...props} />;
+    };
+
+    // The keys of the PAGES object can be used in the prop types to catch dev-time errors.
+    Page.propTypes = {
+      page: PropTypes.oneOf(Object.keys(PAGES)).isRequired,
+    };
+    ```
+<br/>
+
+* **Why we need to pass function to `setState()**
+  * setState is an async operation. 
+  * React batches state change for performance reason.
+  * The call back ensure you can also get the previous state to just be sure about the update
+    ```js
+      this.setState((prevState, props) => ({
+    count: prevState.count + props.increment,
+  }));
+  // this.state.count === 3 as expected
+    ```
+<br/>
+
+* **What are some pointer Events supported in React?**
+  * Pointer Events provide a unified way of handling all input events.
+    * OnPointerDown
+    * OnPointerUp
+    * OnPointerMove
+    * OnPointerCancel
+<br/>
+
+* **Why component name should start with capital letter?**
+  * If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as an unrecognized tag
+<br/>
+
+* **What are render props?**
+  * Render Props is a simple technique for sharing code between components using a prop whose value is a function. 
+  * The below component uses render prop which returns a React element.
+  * `<DataProvider render={(data) => <h1>{Hello ${data.target}}</h1>} />`
